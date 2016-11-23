@@ -115,23 +115,44 @@ public class Main {
         Random side = new Random();
         int random = r.nextInt(3);
         Figur[] Figures = new Figur[10];
+        double Areas[] = new double[10];
         for (int i = 1; i < 11; i++) {
             Figur a;
             switch (random) {
-                case 1: a = new Triangle(x.nextInt(100), x.nextInt(100), side.nextInt(100));
+                case 1:
+                    a = new Triangle(x.nextInt(100), x.nextInt(100), side.nextInt(100));
                     break;
-                case 2: a = new Square(x.nextInt(100),x.nextInt(100),side.nextInt(100));
+                case 2:
+                    a = new Square(x.nextInt(100), x.nextInt(100), side.nextInt(100));
                     break;
-                default: a = new Circle(x.nextInt(100),x.nextInt(100),side.nextInt(100));
+                default:
+                    a = new Circle(x.nextInt(100), x.nextInt(100), side.nextInt(100));
                     break;
             }
             Random k = new Random();
             a.resize(k.nextDouble());
-            Figures[i-1] = a;
+            double area = a.area();
+            Figures[i - 1] = a;
+            Areas[i - 1] = area;
+            bubbleSort(Areas);
+        }
+    }
+    //Arrays.sort(Figures);
+    // to do
+
+    public static void bubbleSort(double[] arr) {
+    /*Внешний цикл каждый раз сокращает фрагмент массива,
+      так как внутренний цикл каждый раз ставит в конец
+      фрагмента максимальный элемент*/
+        for (int i = arr.length - 1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    double tmp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = tmp;
+                }
             }
-        //Arrays.sort(Figures);
-        // to do
-
-
+        }
+    }
 }
-}
+
