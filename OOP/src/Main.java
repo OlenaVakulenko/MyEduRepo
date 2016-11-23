@@ -1,13 +1,8 @@
-import org.omg.CORBA.Object;
-
-import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.Random;
 
 /**
  * Created by olenka on 22.11.2016.
  */
-//abstract class Figur implements Comparable<Figur> {
 abstract class Figur {
     double x;
     double y;
@@ -20,23 +15,6 @@ abstract class Figur {
 
     // абстрактный метод для изменения размера
     abstract void resize(double koef);
-
-//    public int compareTo(Object obj)
-//    {
-//        Figur tmp = (Figur) obj;
-//        if(this.area() < tmp.area())
-//        {
-//      /* текущее меньше полученного */
-//            return -1;
-//        }
-//        else if(this.area() > tmp.area())
-//        {
-//      /* текущее больше полученного */
-//            return 1;
-//        }
-//    /* текущее равно полученному */
-//        return 0;
-//    }
 
 }
 
@@ -137,8 +115,6 @@ public class Main {
             bubbleSort(Areas);
         }
     }
-    //Arrays.sort(Figures);
-    // to do
 
     public static void bubbleSort(double[] arr) {
     /*Внешний цикл каждый раз сокращает фрагмент массива,
