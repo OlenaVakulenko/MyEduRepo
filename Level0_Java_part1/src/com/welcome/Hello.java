@@ -1,7 +1,7 @@
 package com.welcome;
 import java.util.Scanner;
 
-class Hello{
+public class Hello{
     static String name;
 
     public static void setupName() {

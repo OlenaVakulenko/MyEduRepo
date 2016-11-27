@@ -1,4 +1,4 @@
-package com.me;
+package hello_world;
 
 public class HelloWorld {
 

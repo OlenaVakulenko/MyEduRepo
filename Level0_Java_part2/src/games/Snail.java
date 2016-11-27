@@ -1,33 +1,12 @@
 package games;
 
-import java.util.Scanner;
-import java.io.*;
-
-import static java.lang.Integer.parseInt;
-
 /**
  * Created by olenka on 20.11.2016.
  */
 
-
 public class Snail {
 
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        System.out.println("Enter the number of elements:");
-        String size=in.nextLine();
-        try {
-            calculateSnail(Integer.parseInt(size));
-        } catch (Exception e) {
-            System.out.println("Invalid data");
-        }
-    }
-
-
     public static void calculateSnail(int size){
-//        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-//        System.out.print("Enter the number of elements:");
-//        int n= parseInt(br.readLine());
         try {
             int A[][]=new int[size][size];
             int k=size*size, c1=0, c2=size-1, r1=0, r2=size-1;
