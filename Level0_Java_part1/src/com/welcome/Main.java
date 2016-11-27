@@ -1,28 +1,13 @@
 package com.welcome;
-import java.util.Scanner;
-import com.me.Main;
 
-class Hello{
-    static String name;
-
+public class Main {
     public static void main(String[] args) {
-        setupName();
-        welcome();
-        Main.main();
-        byeBay();
+        Hello.setupName();
+        Hello.welcome();
+        com.me.HelloWorld.helloWorld();
+        Hello.byeBay();
 
-    }
-
-    private static void setupName() {
-        Scanner in = new Scanner(System.in);
-        System.out.println("Please enter your name");
-        name = in.nextLine();
-    }
-    private static void welcome() {
-        System.out.println("Hello " + name);
-    }
-
-    private static void byeBay() {
-        System.out.println("Bye " + name);
     }
 }
+
+
