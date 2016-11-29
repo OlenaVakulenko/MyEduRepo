@@ -1,22 +1,25 @@
 package figur;
 
 public class Circle extends Figur {
-    double radius;
-    public Circle (double x, double y, double radius) {
+    public double radius;
+    public Circle (double coordX, double coordY, double radius) {
         this.radius = radius;
-        super.x = x;
-        super.y = y;
+        super.coordX = coordX;
+        super.coordY = coordY;
     }
+
     // переопределяем метод вычисления прощади
     public double area() {
         return Math.PI * radius * radius;
     }
-    // переопределяем метод перемещения
-    public void move(double step) {
-        x = x + step;
-    }
+
     // переопределяем метод изменения размера
     public void resize(double koef) {
         radius = radius * koef;
+    }
+
+    @Override
+    public String toString() {
+        return "Circle";
     }
 }

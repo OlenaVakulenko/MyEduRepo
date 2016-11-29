@@ -1,23 +1,25 @@
 package figur;
 
 public class Square extends Figur {
-    double side;
-    public Square(double x, double y, double side) {
+    public double side;
+    public Square(double coordX, double coordY, double side) {
         this.side = side;
-        super.x = x;
-        super.y = y;
+        super.coordX = coordX;
+        super.coordY = coordY;
     }
     // переопределяем метод вычисления прощади
     public double area() {
         return (side * side);
     }
-    // переопределяем метод перемещения
-    public void move(double step) {
-        x = x + step;
-    }
+
     // переопределяем метод изменения размера
     public void resize(double koef) {
         side = side * koef;
+    }
+
+    @Override
+    public String toString() {
+        return "Square";
     }
 }
 

@@ -11,30 +11,46 @@ public class Main {
         Random r = new Random();
         Random x = new Random();
         Random side = new Random();
-        int random = r.nextInt(3);
         figur.Figur[] Figures = new figur.Figur[10];
         double Areas[] = new double[10];
         for (int i = 1; i < 11; i++) {
-            figur.Figur a;
+            int random = r.nextInt(3);
+            double sideNew = side.nextInt(100);
+            figur.Figur someFigure;
             switch (random) {
                 case 1:
-                    a = new figur.Triangle(x.nextInt(100), x.nextInt(100), side.nextInt(100));
+                    someFigure = new figur.Triangle(x.nextInt(100), x.nextInt(100), sideNew);
                     break;
                 case 2:
-                    a = new figur.Square(x.nextInt(100), x.nextInt(100), side.nextInt(100));
+                    someFigure = new figur.Square(x.nextInt(100), x.nextInt(100), sideNew);
                     break;
                 default:
-                    a = new figur.Circle(x.nextInt(100), x.nextInt(100), side.nextInt(100));
+                    someFigure = new figur.Circle(x.nextInt(100), x.nextInt(100), sideNew);
                     break;
             }
+
             Random k = new Random();
-            a.resize(k.nextDouble());
-            double area = a.area();
-            Figures[i - 1] = a;
+            someFigure.resize(k.nextDouble());
+            double area = someFigure.area();
+            Figures[i - 1] = someFigure;
             Areas[i - 1] = area;
-            bubbleSort(Areas);
         }
+        // Фигуры и площади до сортировки
+        System.out.println("Фигуры и площади до сорторовки");
+        for (int step = 0; step < Figures.length - 1; step++) {
+            System.out.println(Figures[step]);
+            System.out.println(Areas[step]);
+        }
+        bubbleSort(Areas);
+        // Фигуры и площади после сортировки
+        System.out.println("Фигуры и площади после сорторовки");
+        for (int step = 0; step < Figures.length - 1; step++) {
+            System.out.println(Figures[step]);
+            System.out.println(Areas[step]);
+        }
+
     }
+
 
     public static void bubbleSort(double[] arr) {
     /*Внешний цикл каждый раз сокращает фрагмент массива,
