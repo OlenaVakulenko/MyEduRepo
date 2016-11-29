@@ -6,9 +6,9 @@ package games;
 
 public class Snail {
 
-    public static void calculateSnail(int size){
+    public static int[][] calculateSnail(int size){
         try {
-            int A[][]=new int[size][size];
+            int A[][] = new int[size][size];
             int k=size*size, c1=0, c2=size-1, r1=0, r2=size-1;
 
             while(k>=1) {
@@ -48,16 +48,18 @@ public class Snail {
             /* Printing the Circular matrix */
             System.out.println("The Circular Matrix is:");
             for(int i=0;i<size;i++) {
-                for(int j=0;j<size;j++)
-                {
-                    System.out.print(A[i][j]+ "\t");
+                for (int j = 0; j < size; j++) {
+                    System.out.print(A[i][j] + "\t");
                 }
                 System.out.println();
             }
+            return A;
+
         } catch (Exception e) {
-            System.out.println("Вы ввели неверные данные");
+            System.out.println("Invalid data");
         }
-        }
+        return null;
+    };
 
 }
 
