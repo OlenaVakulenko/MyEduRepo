@@ -1,0 +1,3189 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "001 The area of a circle is r^2*Pi",
+        "description": "",
+        "id": "circle;001-the-area-of-a-circle-is-r^2*pi",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 266424386,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I create Circle with coordinates \"0\",\"0\" and radius \"9\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 34
+                },
+                {
+                  "val": "0",
+                  "offset": 38
+                },
+                {
+                  "val": "9",
+                  "offset": 53
+                }
+              ],
+              "location": "CircleStepdefs.iCreateCircleWithCoordinatesAndRadius(String,String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 12690106,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Area of circle equals 254.34",
+            "match": {
+              "arguments": [
+                {
+                  "val": "254.34",
+                  "offset": 22
+                }
+              ],
+              "location": "CircleStepdefs.areaOfCircleEquals(double)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 8,
+        "name": "002 When I move the Circle it changes coordinates by certain step",
+        "description": "",
+        "id": "circle;002-when-i-move-the-circle-it-changes-coordinates-by-certain-step",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 429333,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I create Circle with coordinates \"0\",\"0\" and radius \"9\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 34
+                },
+                {
+                  "val": "0",
+                  "offset": 38
+                },
+                {
+                  "val": "9",
+                  "offset": 53
+                }
+              ],
+              "location": "CircleStepdefs.iCreateCircleWithCoordinatesAndRadius(String,String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 305607,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I move Circle by 1,2",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 17
+                },
+                {
+                  "val": "2",
+                  "offset": 19
+                }
+              ],
+              "location": "CircleStepdefs.iMoveCircleBy(double,double)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2427182,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "New coordinates are 1,2",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 20
+                },
+                {
+                  "val": "2",
+                  "offset": 22
+                }
+              ],
+              "location": "CircleStepdefs.newCoordinatesAre(double,double)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "003 When I resize Circle its radius changes by coefficient",
+        "description": "",
+        "id": "circle;003-when-i-resize-circle-its-radius-changes-by-coefficient",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 199557,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I create Circle with coordinates \"0\",\"0\" and radius \"9\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 34
+                },
+                {
+                  "val": "0",
+                  "offset": 38
+                },
+                {
+                  "val": "9",
+                  "offset": 53
+                }
+              ],
+              "location": "CircleStepdefs.iCreateCircleWithCoordinatesAndRadius(String,String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 174470,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I resize circle by coefficient 0.5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0.5",
+                  "offset": 31
+                }
+              ],
+              "location": "CircleStepdefs.iResizeCircleByCoefficient(double)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 164207,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Radius equals 4.5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4.5",
+                  "offset": 14
+                }
+              ],
+              "location": "CircleStepdefs.radiusEquals(double)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 18,
+        "name": "004 Circle is instance of Figure",
+        "description": "",
+        "id": "circle;004-circle-is-instance-of-figure",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 444727,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I create Circle with coordinates \"0\",\"0\" and radius \"9\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 34
+                },
+                {
+                  "val": "0",
+                  "offset": 38
+                },
+                {
+                  "val": "9",
+                  "offset": 53
+                }
+              ],
+              "location": "CircleStepdefs.iCreateCircleWithCoordinatesAndRadius(String,String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 256003,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Circle is instance of Figure",
+            "match": {
+              "location": "CircleStepdefs.circleIsInstanceOfFigure()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Circle",
+    "description": "",
+    "id": "circle",
+    "keyword": "Feature",
+    "uri": "testCircle.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Circle"
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "001 When I create Matrix the program returns object Matrix",
+        "description": "",
+        "id": "matrix;001-when-i-create-matrix-the-program-returns-object-matrix",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1577640,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I start program Matrix",
+            "match": {
+              "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 519989,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I create matrix with size 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 26
+                }
+              ],
+              "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 74691,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I returns Matrix",
+            "match": {
+              "location": "MatrixStepdefs.iReturnsMatrix()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 9,
+        "name": "003 Input Validation",
+        "description": "",
+        "id": "matrix;003-input-validation",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 82103,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I start program Matrix",
+            "match": {
+              "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 389421,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I validate string \"j\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "j",
+                  "offset": 19
+                }
+              ],
+              "location": "MatrixStepdefs.iValidateString(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 72411,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Validation doesn\u0027t pass",
+            "match": {
+              "location": "MatrixStepdefs.validationDoesnTPass()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 20,
+        "name": "002 When I create Matrix I receive Matrix of certain Pattern",
+        "description": "",
+        "id": "matrix;002-when-i-create-matrix-i-receive-matrix-of-certain-pattern;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 81533,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I start program Matrix",
+            "match": {
+              "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 163636,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I create matrix with size 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 26
+                }
+              ],
+              "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 271968,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I see on return matrix in row 0 and position 0 with value 1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 30
+                },
+                {
+                  "val": "0",
+                  "offset": 45
+                },
+                {
+                  "val": "1",
+                  "offset": 58
+                }
+              ],
+              "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Matrix"
+          }
+        ]
+      },
+      {
+        "line": 21,
+        "name": "002 When I create Matrix I receive Matrix of certain Pattern",
+        "description": "",
+        "id": "matrix;002-when-i-create-matrix-i-receive-matrix-of-certain-pattern;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 78682,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I start program Matrix",
+            "match": {
+              "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 153374,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I create matrix with size 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 26
+                }
+              ],
+              "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 319861,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I see on return matrix in row 0 and position 1 with value 2",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 30
+                },
+                {
+                  "val": "1",
+                  "offset": 45
+                },
+                {
+                  "val": "2",
+                  "offset": 58
+                }
+              ],
+              "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Matrix"
+          }
+        ]
+      },
+      {
+        "line": 22,
+        "name": "002 When I create Matrix I receive Matrix of certain Pattern",
+        "description": "",
+        "id": "matrix;002-when-i-create-matrix-i-receive-matrix-of-certain-pattern;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 66709,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I start program Matrix",
+            "match": {
+              "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 141400,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I create matrix with size 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 26
+                }
+              ],
+              "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 257714,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I see on return matrix in row 0 and position 2 with value 3",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 30
+                },
+                {
+                  "val": "2",
+                  "offset": 45
+                },
+                {
+                  "val": "3",
+                  "offset": 58
+                }
+              ],
+              "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Matrix"
+          }
+        ]
+      },
+      {
+        "line": 23,
+        "name": "002 When I create Matrix I receive Matrix of certain Pattern",
+        "description": "",
+        "id": "matrix;002-when-i-create-matrix-i-receive-matrix-of-certain-pattern;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 78683,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I start program Matrix",
+            "match": {
+              "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 295344,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I create matrix with size 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 26
+                }
+              ],
+              "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 245170,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I see on return matrix in row 0 and position 3 with value 4",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 30
+                },
+                {
+                  "val": "3",
+                  "offset": 45
+                },
+                {
+                  "val": "4",
+                  "offset": 58
+                }
+              ],
+              "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Matrix"
+          }
+        ]
+      },
+      {
+        "line": 24,
+        "name": "002 When I create Matrix I receive Matrix of certain Pattern",
+        "description": "",
+        "id": "matrix;002-when-i-create-matrix-i-receive-matrix-of-certain-pattern;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 61577,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I start program Matrix",
+            "match": {
+              "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 127716,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I create matrix with size 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 26
+                }
+              ],
+              "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 200697,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I see on return matrix in row 0 and position 4 with value 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 30
+                },
+                {
+                  "val": "4",
+                  "offset": 45
+                },
+                {
+                  "val": "5",
+                  "offset": 58
+                }
+              ],
+              "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Matrix"
+          }
+        ]
+      },
+      {
+        "line": 25,
+        "name": "002 When I create Matrix I receive Matrix of certain Pattern",
+        "description": "",
+        "id": "matrix;002-when-i-create-matrix-i-receive-matrix-of-certain-pattern;;7",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 103770,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I start program Matrix",
+            "match": {
+              "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 311309,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I create matrix with size 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 26
+                }
+              ],
+              "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 449288,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I see on return matrix in row 1 and position 0 with value 6",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 30
+                },
+                {
+                  "val": "0",
+                  "offset": 45
+                },
+                {
+                  "val": "6",
+                  "offset": 58
+                }
+              ],
+              "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Matrix"
+          }
+        ]
+      },
+      {
+        "line": 26,
+        "name": "002 When I create Matrix I receive Matrix of certain Pattern",
+        "description": "",
+        "id": "matrix;002-when-i-create-matrix-i-receive-matrix-of-certain-pattern;;8",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 68990,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I start program Matrix",
+            "match": {
+              "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 155654,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I create matrix with size 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 26
+                }
+              ],
+              "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 267406,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I see on return matrix in row 1 and position 1 with value 7",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 30
+                },
+                {
+                  "val": "1",
+                  "offset": 45
+                },
+                {
+                  "val": "7",
+                  "offset": 58
+                }
+              ],
+              "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Matrix"
+          }
+        ]
+      },
+      {
+        "line": 27,
+        "name": "002 When I create Matrix I receive Matrix of certain Pattern",
+        "description": "",
+        "id": "matrix;002-when-i-create-matrix-i-receive-matrix-of-certain-pattern;;9",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 97498,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I start program Matrix",
+            "match": {
+              "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 176751,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I create matrix with size 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 26
+                }
+              ],
+              "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 449858,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I see on return matrix in row 1 and position 2 with value 8",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 30
+                },
+                {
+                  "val": "2",
+                  "offset": 45
+                },
+                {
+                  "val": "8",
+                  "offset": 58
+                }
+              ],
+              "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Matrix"
+          }
+        ]
+      },
+      {
+        "line": 28,
+        "name": "002 When I create Matrix I receive Matrix of certain Pattern",
+        "description": "",
+        "id": "matrix;002-when-i-create-matrix-i-receive-matrix-of-certain-pattern;;10",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 77542,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I start program Matrix",
+            "match": {
+              "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 157935,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I create matrix with size 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 26
+                }
+              ],
+              "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 293634,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I see on return matrix in row 1 and position 3 with value 9",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 30
+                },
+                {
+                  "val": "3",
+                  "offset": 45
+                },
+                {
+                  "val": "9",
+                  "offset": 58
+                }
+              ],
+              "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Matrix"
+          }
+        ]
+      },
+      {
+        "line": 29,
+        "name": "002 When I create Matrix I receive Matrix of certain Pattern",
+        "description": "",
+        "id": "matrix;002-when-i-create-matrix-i-receive-matrix-of-certain-pattern;;11",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 72981,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I start program Matrix",
+            "match": {
+              "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 163067,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I create matrix with size 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 26
+                }
+              ],
+              "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 248591,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I see on return matrix in row 1 and position 4 with value 1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 30
+                },
+                {
+                  "val": "4",
+                  "offset": 45
+                },
+                {
+                  "val": "1",
+                  "offset": 58
+                }
+              ],
+              "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Matrix"
+          }
+        ]
+      },
+      {
+        "line": 30,
+        "name": "002 When I create Matrix I receive Matrix of certain Pattern",
+        "description": "",
+        "id": "matrix;002-when-i-create-matrix-i-receive-matrix-of-certain-pattern;;12",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 75832,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I start program Matrix",
+            "match": {
+              "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 158505,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I create matrix with size 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 26
+                }
+              ],
+              "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 305607,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I see on return matrix in row 2 and position 0 with value 2",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 30
+                },
+                {
+                  "val": "0",
+                  "offset": 45
+                },
+                {
+                  "val": "2",
+                  "offset": 58
+                }
+              ],
+              "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Matrix"
+          }
+        ]
+      },
+      {
+        "line": 31,
+        "name": "002 When I create Matrix I receive Matrix of certain Pattern",
+        "description": "",
+        "id": "matrix;002-when-i-create-matrix-i-receive-matrix-of-certain-pattern;;13",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 70700,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I start program Matrix",
+            "match": {
+              "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 150523,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I create matrix with size 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 26
+                }
+              ],
+              "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 300475,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I see on return matrix in row 2 and position 1 with value 3",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 30
+                },
+                {
+                  "val": "1",
+                  "offset": 45
+                },
+                {
+                  "val": "3",
+                  "offset": 58
+                }
+              ],
+              "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Matrix"
+          }
+        ]
+      },
+      {
+        "line": 32,
+        "name": "002 When I create Matrix I receive Matrix of certain Pattern",
+        "description": "",
+        "id": "matrix;002-when-i-create-matrix-i-receive-matrix-of-certain-pattern;;14",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 78683,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I start program Matrix",
+            "match": {
+              "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 155654,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I create matrix with size 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 26
+                }
+              ],
+              "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 259994,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I see on return matrix in row 2 and position 2 with value 4",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 30
+                },
+                {
+                  "val": "2",
+                  "offset": 45
+                },
+                {
+                  "val": "4",
+                  "offset": 58
+                }
+              ],
+              "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Matrix"
+          }
+        ]
+      },
+      {
+        "line": 33,
+        "name": "002 When I create Matrix I receive Matrix of certain Pattern",
+        "description": "",
+        "id": "matrix;002-when-i-create-matrix-i-receive-matrix-of-certain-pattern;;15",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1250937,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I start program Matrix",
+            "match": {
+              "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 152233,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I create matrix with size 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 26
+                }
+              ],
+              "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 315870,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I see on return matrix in row 2 and position 3 with value 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 30
+                },
+                {
+                  "val": "3",
+                  "offset": 45
+                },
+                {
+                  "val": "5",
+                  "offset": 58
+                }
+              ],
+              "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Matrix"
+          }
+        ]
+      },
+      {
+        "line": 34,
+        "name": "002 When I create Matrix I receive Matrix of certain Pattern",
+        "description": "",
+        "id": "matrix;002-when-i-create-matrix-i-receive-matrix-of-certain-pattern;;16",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 87235,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I start program Matrix",
+            "match": {
+              "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1004056,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I create matrix with size 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 26
+                }
+              ],
+              "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 278240,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I see on return matrix in row 2 and position 4 with value 6",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 30
+                },
+                {
+                  "val": "4",
+                  "offset": 45
+                },
+                {
+                  "val": "6",
+                  "offset": 58
+                }
+              ],
+              "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Matrix"
+          }
+        ]
+      },
+      {
+        "line": 35,
+        "name": "002 When I create Matrix I receive Matrix of certain Pattern",
+        "description": "",
+        "id": "matrix;002-when-i-create-matrix-i-receive-matrix-of-certain-pattern;;17",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 54165,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I start program Matrix",
+            "match": {
+              "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 177320,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I create matrix with size 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 26
+                }
+              ],
+              "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1132913,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I see on return matrix in row 3 and position 0 with value 7",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 30
+                },
+                {
+                  "val": "0",
+                  "offset": 45
+                },
+                {
+                  "val": "7",
+                  "offset": 58
+                }
+              ],
+              "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Matrix"
+          }
+        ]
+      },
+      {
+        "line": 36,
+        "name": "002 When I create Matrix I receive Matrix of certain Pattern",
+        "description": "",
+        "id": "matrix;002-when-i-create-matrix-i-receive-matrix-of-certain-pattern;;18",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 58156,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I start program Matrix",
+            "match": {
+              "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 159646,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I create matrix with size 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 26
+                }
+              ],
+              "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 297055,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I see on return matrix in row 3 and position 1 with value 8",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 30
+                },
+                {
+                  "val": "1",
+                  "offset": 45
+                },
+                {
+                  "val": "8",
+                  "offset": 58
+                }
+              ],
+              "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Matrix"
+          }
+        ]
+      },
+      {
+        "line": 37,
+        "name": "002 When I create Matrix I receive Matrix of certain Pattern",
+        "description": "",
+        "id": "matrix;002-when-i-create-matrix-i-receive-matrix-of-certain-pattern;;19",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 55876,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I start program Matrix",
+            "match": {
+              "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 148242,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I create matrix with size 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 26
+                }
+              ],
+              "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 243459,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I see on return matrix in row 3 and position 2 with value 9",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 30
+                },
+                {
+                  "val": "2",
+                  "offset": 45
+                },
+                {
+                  "val": "9",
+                  "offset": 58
+                }
+              ],
+              "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Matrix"
+          }
+        ]
+      },
+      {
+        "line": 38,
+        "name": "002 When I create Matrix I receive Matrix of certain Pattern",
+        "description": "",
+        "id": "matrix;002-when-i-create-matrix-i-receive-matrix-of-certain-pattern;;20",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 52455,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I start program Matrix",
+            "match": {
+              "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 140260,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I create matrix with size 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 26
+                }
+              ],
+              "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 246880,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I see on return matrix in row 3 and position 3 with value 1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 30
+                },
+                {
+                  "val": "3",
+                  "offset": 45
+                },
+                {
+                  "val": "1",
+                  "offset": 58
+                }
+              ],
+              "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Matrix"
+          }
+        ]
+      },
+      {
+        "line": 39,
+        "name": "002 When I create Matrix I receive Matrix of certain Pattern",
+        "description": "",
+        "id": "matrix;002-when-i-create-matrix-i-receive-matrix-of-certain-pattern;;21",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 50744,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I start program Matrix",
+            "match": {
+              "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 142541,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I create matrix with size 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 26
+                }
+              ],
+              "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 255433,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I see on return matrix in row 3 and position 4 with value 2",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 30
+                },
+                {
+                  "val": "4",
+                  "offset": 45
+                },
+                {
+                  "val": "2",
+                  "offset": 58
+                }
+              ],
+              "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Matrix"
+          }
+        ]
+      },
+      {
+        "line": 40,
+        "name": "002 When I create Matrix I receive Matrix of certain Pattern",
+        "description": "",
+        "id": "matrix;002-when-i-create-matrix-i-receive-matrix-of-certain-pattern;;22",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 51315,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I start program Matrix",
+            "match": {
+              "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 142541,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I create matrix with size 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 26
+                }
+              ],
+              "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 224074,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I see on return matrix in row 4 and position 0 with value 3",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 30
+                },
+                {
+                  "val": "0",
+                  "offset": 45
+                },
+                {
+                  "val": "3",
+                  "offset": 58
+                }
+              ],
+              "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Matrix"
+          }
+        ]
+      },
+      {
+        "line": 41,
+        "name": "002 When I create Matrix I receive Matrix of certain Pattern",
+        "description": "",
+        "id": "matrix;002-when-i-create-matrix-i-receive-matrix-of-certain-pattern;;23",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 52455,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I start program Matrix",
+            "match": {
+              "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 137980,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I create matrix with size 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 26
+                }
+              ],
+              "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 252012,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I see on return matrix in row 4 and position 1 with value 4",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 30
+                },
+                {
+                  "val": "1",
+                  "offset": 45
+                },
+                {
+                  "val": "4",
+                  "offset": 58
+                }
+              ],
+              "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Matrix"
+          }
+        ]
+      },
+      {
+        "line": 42,
+        "name": "002 When I create Matrix I receive Matrix of certain Pattern",
+        "description": "",
+        "id": "matrix;002-when-i-create-matrix-i-receive-matrix-of-certain-pattern;;24",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 57586,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I start program Matrix",
+            "match": {
+              "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 136269,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I create matrix with size 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 26
+                }
+              ],
+              "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 216092,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I see on return matrix in row 4 and position 2 with value 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 30
+                },
+                {
+                  "val": "2",
+                  "offset": 45
+                },
+                {
+                  "val": "5",
+                  "offset": 58
+                }
+              ],
+              "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Matrix"
+          }
+        ]
+      },
+      {
+        "line": 43,
+        "name": "002 When I create Matrix I receive Matrix of certain Pattern",
+        "description": "",
+        "id": "matrix;002-when-i-create-matrix-i-receive-matrix-of-certain-pattern;;25",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 51315,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I start program Matrix",
+            "match": {
+              "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 165917,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I create matrix with size 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 26
+                }
+              ],
+              "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 262274,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I see on return matrix in row 4 and position 3 with value 6",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 30
+                },
+                {
+                  "val": "3",
+                  "offset": 45
+                },
+                {
+                  "val": "6",
+                  "offset": 58
+                }
+              ],
+              "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Matrix"
+          }
+        ]
+      },
+      {
+        "line": 44,
+        "name": "002 When I create Matrix I receive Matrix of certain Pattern",
+        "description": "",
+        "id": "matrix;002-when-i-create-matrix-i-receive-matrix-of-certain-pattern;;26",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 54165,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I start program Matrix",
+            "match": {
+              "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 133418,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I create matrix with size 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 26
+                }
+              ],
+              "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 220082,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I see on return matrix in row 4 and position 4 with value 7",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 30
+                },
+                {
+                  "val": "4",
+                  "offset": 45
+                },
+                {
+                  "val": "7",
+                  "offset": 58
+                }
+              ],
+              "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Matrix"
+          }
+        ]
+      }
+    ],
+    "name": "Matrix",
+    "description": "",
+    "id": "matrix",
+    "keyword": "Feature",
+    "uri": "testMatrix.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Matrix"
+      }
+    ]
+  },
+  {
+    "line": 3,
+    "elements": [
+      {
+        "line": 5,
+        "name": "001 When I reverse string I get string written backwards",
+        "description": "",
+        "id": "palindrom;001-when-i-reverse-string-i-get-string-written-backwards",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1244664,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I reverse string \"abcdef\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "abcdef",
+                  "offset": 18
+                }
+              ],
+              "location": "PalindromStepdefs.iReverseString(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 179031,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Reversed string is \"fedcba\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "fedcba",
+                  "offset": 20
+                }
+              ],
+              "location": "PalindromStepdefs.reversedStringIs(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 14,
+        "name": "002 Check if the Word is Palindrom",
+        "description": "",
+        "id": "palindrom;002-check-if-the-word-is-palindrom;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 228065,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I check string with value \"pop\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "pop",
+                  "offset": 27
+                }
+              ],
+              "location": "PalindromStepdefs.iCheckStringWithValue(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 148812,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I get the result \"True\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "True",
+                  "offset": 18
+                }
+              ],
+              "location": "PalindromStepdefs.iGetTheResult(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Palindrom"
+          }
+        ]
+      },
+      {
+        "line": 15,
+        "name": "002 Check if the Word is Palindrom",
+        "description": "",
+        "id": "palindrom;002-check-if-the-word-is-palindrom;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 145961,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I check string with value \"Level\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Level",
+                  "offset": 27
+                }
+              ],
+              "location": "PalindromStepdefs.iCheckStringWithValue(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 113462,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I get the result \"True\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "True",
+                  "offset": 18
+                }
+              ],
+              "location": "PalindromStepdefs.iGetTheResult(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Palindrom"
+          }
+        ]
+      },
+      {
+        "line": 16,
+        "name": "002 Check if the Word is Palindrom",
+        "description": "",
+        "id": "palindrom;002-check-if-the-word-is-palindrom;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 207539,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I check string with value \"moon\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "moon",
+                  "offset": 27
+                }
+              ],
+              "location": "PalindromStepdefs.iCheckStringWithValue(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 79822,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I get the result \"False\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "False",
+                  "offset": 18
+                }
+              ],
+              "location": "PalindromStepdefs.iGetTheResult(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Palindrom"
+          }
+        ]
+      },
+      {
+        "line": 23,
+        "name": "003 Check if the Phrese is Palindrom",
+        "description": "",
+        "id": "palindrom;003-check-if-the-phrese-is-palindrom;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 201267,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I check phrase with value \"A man a plan a canal Panama\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "A man a plan a canal Panama",
+                  "offset": 27
+                }
+              ],
+              "location": "PalindromStepdefs.iCheckPhraseWithValue(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 99779,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I get the output \"True\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "True",
+                  "offset": 18
+                }
+              ],
+              "location": "PalindromStepdefs.iGetTheOutput(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Palindrom"
+          }
+        ]
+      },
+      {
+        "line": 24,
+        "name": "003 Check if the Phrese is Palindrom",
+        "description": "",
+        "id": "palindrom;003-check-if-the-phrese-is-palindrom;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 237188,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I check phrase with value \"Man a plan a canal Panama\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Man a plan a canal Panama",
+                  "offset": 27
+                }
+              ],
+              "location": "PalindromStepdefs.iCheckPhraseWithValue(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 100919,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I get the output \"False\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "False",
+                  "offset": 18
+                }
+              ],
+              "location": "PalindromStepdefs.iGetTheOutput(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Palindrom"
+          }
+        ]
+      }
+    ],
+    "name": "Palindrom",
+    "description": "",
+    "id": "palindrom",
+    "keyword": "Feature",
+    "uri": "testPalindrom.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Palindrom"
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "002 Position of Max element in Matrix with odd size",
+        "description": "",
+        "id": "snail;002-position-of-max-element-in-matrix-with-odd-size",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1142035,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I start program Snail",
+            "match": {
+              "location": "SnailStepdefs.iStartProgramSnail()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1641498,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I create matrix with side value 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 32
+                }
+              ],
+              "location": "SnailStepdefs.iCreateMatrixWithSideValue(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 911119,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "current position of maximum element is 0,4",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 39
+                },
+                {
+                  "val": "4",
+                  "offset": 41
+                }
+              ],
+              "location": "SnailStepdefs.currentPositionOfMaximumElementIs(int,int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 9,
+        "name": "003 Position of Max element in Matrix with even size",
+        "description": "",
+        "id": "snail;003-position-of-max-element-in-matrix-with-even-size",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 465823,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I start program Snail",
+            "match": {
+              "location": "SnailStepdefs.iStartProgramSnail()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 338107,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I create matrix with side value 4",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 32
+                }
+              ],
+              "location": "SnailStepdefs.iCreateMatrixWithSideValue(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 187013,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "current position of maximum element is 3,0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 39
+                },
+                {
+                  "val": "0",
+                  "offset": 41
+                }
+              ],
+              "location": "SnailStepdefs.currentPositionOfMaximumElementIs(int,int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 14,
+        "name": "004 Snail returns Martix with particular size",
+        "description": "",
+        "id": "snail;004-snail-returns-martix-with-particular-size",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 72411,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I start program Snail",
+            "match": {
+              "location": "SnailStepdefs.iStartProgramSnail()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 157365,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I create matrix with size 3",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 26
+                }
+              ],
+              "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 258854,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "program returns Matrix with size 3",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 33
+                }
+              ],
+              "location": "SnailStepdefs.programReturnsMatrixWithSize(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 20,
+        "name": "001 Max element in Matrix",
+        "description": "",
+        "id": "snail;001-max-element-in-matrix",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 913971,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I create matrix with side value 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 32
+                }
+              ],
+              "location": "SnailStepdefs.iCreateMatrixWithSideValue(int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 157935,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "current maximum element is 25",
+            "match": {
+              "arguments": [
+                {
+                  "val": "25",
+                  "offset": 27
+                }
+              ],
+              "location": "SnailStepdefs.currentMaximumElementIs(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 19,
+            "name": "@SnailSpecial"
+          }
+        ]
+      }
+    ],
+    "name": "Snail",
+    "description": "",
+    "id": "snail",
+    "keyword": "Feature",
+    "uri": "testSnail.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Snail"
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "001 The area of a square is side^2",
+        "description": "",
+        "id": "square;001-the-area-of-a-square-is-side^2",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1268041,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I create Square with side 9 and coordinates 0,0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "9",
+                  "offset": 26
+                },
+                {
+                  "val": "0",
+                  "offset": 44
+                },
+                {
+                  "val": "0",
+                  "offset": 46
+                }
+              ],
+              "location": "SquareStepdefs.iCreateSquareWithSideAndCoordinates(double,double,double)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 196136,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Area of Square equals 81",
+            "match": {
+              "arguments": [
+                {
+                  "val": "81",
+                  "offset": 22
+                }
+              ],
+              "location": "SquareStepdefs.areaOfSquareEquals(double)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 8,
+        "name": "002 When I move the Square it changes coordinates by certain step",
+        "description": "",
+        "id": "square;002-when-i-move-the-square-it-changes-coordinates-by-certain-step",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 500603,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I create Square with side 9 and coordinates 0,0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "9",
+                  "offset": 26
+                },
+                {
+                  "val": "0",
+                  "offset": 44
+                },
+                {
+                  "val": "0",
+                  "offset": 46
+                }
+              ],
+              "location": "SquareStepdefs.iCreateSquareWithSideAndCoordinates(double,double,double)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 224644,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I move Square by 1,2",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 17
+                },
+                {
+                  "val": "2",
+                  "offset": 19
+                }
+              ],
+              "location": "SquareStepdefs.iMoveSquareBy(double,double)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1429968,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "New Square coordinates are 1,2",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 27
+                },
+                {
+                  "val": "2",
+                  "offset": 29
+                }
+              ],
+              "location": "SquareStepdefs.newSquareCoordinatesAre(double,double)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "003 When I resize Square its side changes by coefficient",
+        "description": "",
+        "id": "square;003-when-i-resize-square-its-side-changes-by-coefficient",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1004056,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I create Square with side 9 and coordinates 0,0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "9",
+                  "offset": 26
+                },
+                {
+                  "val": "0",
+                  "offset": 44
+                },
+                {
+                  "val": "0",
+                  "offset": 46
+                }
+              ],
+              "location": "SquareStepdefs.iCreateSquareWithSideAndCoordinates(double,double,double)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 169908,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I resize square by coefficient 0.5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0.5",
+                  "offset": 31
+                }
+              ],
+              "location": "SquareStepdefs.iResizeSquareByCoefficient(double)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1838203,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Side equals 4.5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4.5",
+                  "offset": 12
+                }
+              ],
+              "location": "SquareStepdefs.sideEquals(double)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 18,
+        "name": "004 Square is instance of Figure",
+        "description": "",
+        "id": "square;004-square-is-instance-of-figure",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 250872,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I create Square with side 9 and coordinates 0,0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "9",
+                  "offset": 26
+                },
+                {
+                  "val": "0",
+                  "offset": 44
+                },
+                {
+                  "val": "0",
+                  "offset": 46
+                }
+              ],
+              "location": "SquareStepdefs.iCreateSquareWithSideAndCoordinates(double,double,double)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 87235,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Square is instance of Figure",
+            "match": {
+              "location": "SquareStepdefs.circleIsInstanceOfFigure()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Square",
+    "description": "",
+    "id": "square",
+    "keyword": "Feature",
+    "uri": "testSquare.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Square"
+      }
+    ]
+  }
+]
