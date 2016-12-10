@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {"html:target/cucumber-report/nixreport", "json:target/cucumber.json"},
         features = "src/test/java/cucetestpackage/features",
-        glue = "cucetestpackage.stepdefs",
+        glue ="cucetestpackage.stepdefs",
         tags = {"@Snail, @Matrix, @Circle, @Square, @Palindrom"}
         )
 

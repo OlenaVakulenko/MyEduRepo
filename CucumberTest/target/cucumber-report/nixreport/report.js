@@ -13,20 +13,26 @@ formatter.feature({
   ]
 });
 formatter.scenario({
-  "line": 4,
+  "line": 5,
   "name": "001 The area of a circle is r^2*Pi",
   "description": "",
   "id": "circle;001-the-area-of-a-circle-is-r^2*pi",
   "type": "scenario",
-  "keyword": "Scenario"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 4,
+      "name": "@Non-static"
+    }
+  ]
 });
 formatter.step({
-  "line": 5,
+  "line": 6,
   "name": "I create Circle with coordinates \"0\",\"0\" and radius \"9\"",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 6,
+  "line": 7,
   "name": "Area of circle equals 254.34",
   "keyword": "Then "
 });
@@ -48,7 +54,7 @@ formatter.match({
   "location": "CircleStepdefs.iCreateCircleWithCoordinatesAndRadius(String,String,String)"
 });
 formatter.result({
-  "duration": 266424386,
+  "duration": 247378507,
   "status": "passed"
 });
 formatter.match({
@@ -61,29 +67,35 @@ formatter.match({
   "location": "CircleStepdefs.areaOfCircleEquals(double)"
 });
 formatter.result({
-  "duration": 12690106,
+  "duration": 4667971,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 8,
+  "line": 10,
   "name": "002 When I move the Circle it changes coordinates by certain step",
   "description": "",
   "id": "circle;002-when-i-move-the-circle-it-changes-coordinates-by-certain-step",
   "type": "scenario",
-  "keyword": "Scenario"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 9,
+      "name": "@Non-static"
+    }
+  ]
 });
 formatter.step({
-  "line": 9,
+  "line": 11,
   "name": "I create Circle with coordinates \"0\",\"0\" and radius \"9\"",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 10,
+  "line": 12,
   "name": "I move Circle by 1,2",
   "keyword": "When "
 });
 formatter.step({
-  "line": 11,
+  "line": 13,
   "name": "New coordinates are 1,2",
   "keyword": "Then "
 });
@@ -105,7 +117,7 @@ formatter.match({
   "location": "CircleStepdefs.iCreateCircleWithCoordinatesAndRadius(String,String,String)"
 });
 formatter.result({
-  "duration": 429333,
+  "duration": 188156,
   "status": "passed"
 });
 formatter.match({
@@ -122,7 +134,7 @@ formatter.match({
   "location": "CircleStepdefs.iMoveCircleBy(double,double)"
 });
 formatter.result({
-  "duration": 305607,
+  "duration": 330698,
   "status": "passed"
 });
 formatter.match({
@@ -139,29 +151,35 @@ formatter.match({
   "location": "CircleStepdefs.newCoordinatesAre(double,double)"
 });
 formatter.result({
-  "duration": 2427182,
+  "duration": 2373612,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 13,
+  "line": 16,
   "name": "003 When I resize Circle its radius changes by coefficient",
   "description": "",
   "id": "circle;003-when-i-resize-circle-its-radius-changes-by-coefficient",
   "type": "scenario",
-  "keyword": "Scenario"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 15,
+      "name": "@Non-static"
+    }
+  ]
 });
 formatter.step({
-  "line": 14,
+  "line": 17,
   "name": "I create Circle with coordinates \"0\",\"0\" and radius \"9\"",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 15,
+  "line": 18,
   "name": "I resize circle by coefficient 0.5",
   "keyword": "When "
 });
 formatter.step({
-  "line": 16,
+  "line": 19,
   "name": "Radius equals 4.5",
   "keyword": "Then "
 });
@@ -183,7 +201,7 @@ formatter.match({
   "location": "CircleStepdefs.iCreateCircleWithCoordinatesAndRadius(String,String,String)"
 });
 formatter.result({
-  "duration": 199557,
+  "duration": 225216,
   "status": "passed"
 });
 formatter.match({
@@ -196,7 +214,7 @@ formatter.match({
   "location": "CircleStepdefs.iResizeCircleByCoefficient(double)"
 });
 formatter.result({
-  "duration": 174470,
+  "duration": 186445,
   "status": "passed"
 });
 formatter.match({
@@ -209,24 +227,30 @@ formatter.match({
   "location": "CircleStepdefs.radiusEquals(double)"
 });
 formatter.result({
-  "duration": 164207,
+  "duration": 165919,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 18,
+  "line": 22,
   "name": "004 Circle is instance of Figure",
   "description": "",
   "id": "circle;004-circle-is-instance-of-figure",
   "type": "scenario",
-  "keyword": "Scenario"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 21,
+      "name": "@Non-static"
+    }
+  ]
 });
 formatter.step({
-  "line": 19,
+  "line": 23,
   "name": "I create Circle with coordinates \"0\",\"0\" and radius \"9\"",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 20,
+  "line": 24,
   "name": "Circle is instance of Figure",
   "keyword": "Then "
 });
@@ -248,14 +272,14 @@ formatter.match({
   "location": "CircleStepdefs.iCreateCircleWithCoordinatesAndRadius(String,String,String)"
 });
 formatter.result({
-  "duration": 444727,
+  "duration": 305610,
   "status": "passed"
 });
 formatter.match({
   "location": "CircleStepdefs.circleIsInstanceOfFigure()"
 });
 formatter.result({
-  "duration": 256003,
+  "duration": 64429,
   "status": "passed"
 });
 formatter.uri("testMatrix.feature");
@@ -299,7 +323,7 @@ formatter.match({
   "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
 });
 formatter.result({
-  "duration": 1577640,
+  "duration": 19548803,
   "status": "passed"
 });
 formatter.match({
@@ -312,14 +336,14 @@ formatter.match({
   "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
 });
 formatter.result({
-  "duration": 519989,
+  "duration": 246313,
   "status": "passed"
 });
 formatter.match({
   "location": "MatrixStepdefs.iReturnsMatrix()"
 });
 formatter.result({
-  "duration": 74691,
+  "duration": 60438,
   "status": "passed"
 });
 formatter.scenario({
@@ -349,7 +373,7 @@ formatter.match({
   "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
 });
 formatter.result({
-  "duration": 82103,
+  "duration": 66710,
   "status": "passed"
 });
 formatter.match({
@@ -362,14 +386,14 @@ formatter.match({
   "location": "MatrixStepdefs.iValidateString(String)"
 });
 formatter.result({
-  "duration": 389421,
+  "duration": 311312,
   "status": "passed"
 });
 formatter.match({
   "location": "MatrixStepdefs.validationDoesnTPass()"
 });
 formatter.result({
-  "duration": 72411,
+  "duration": 55877,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -676,7 +700,7 @@ formatter.match({
   "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
 });
 formatter.result({
-  "duration": 81533,
+  "duration": 69561,
   "status": "passed"
 });
 formatter.match({
@@ -689,7 +713,7 @@ formatter.match({
   "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
 });
 formatter.result({
-  "duration": 163636,
+  "duration": 142542,
   "status": "passed"
 });
 formatter.match({
@@ -710,7 +734,7 @@ formatter.match({
   "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
 });
 formatter.result({
-  "duration": 271968,
+  "duration": 249164,
   "status": "passed"
 });
 formatter.scenario({
@@ -751,7 +775,7 @@ formatter.match({
   "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
 });
 formatter.result({
-  "duration": 78682,
+  "duration": 84955,
   "status": "passed"
 });
 formatter.match({
@@ -764,7 +788,7 @@ formatter.match({
   "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
 });
 formatter.result({
-  "duration": 153374,
+  "duration": 145963,
   "status": "passed"
 });
 formatter.match({
@@ -785,7 +809,7 @@ formatter.match({
   "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
 });
 formatter.result({
-  "duration": 319861,
+  "duration": 227497,
   "status": "passed"
 });
 formatter.scenario({
@@ -826,7 +850,7 @@ formatter.match({
   "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
 });
 formatter.result({
-  "duration": 66709,
+  "duration": 63859,
   "status": "passed"
 });
 formatter.match({
@@ -839,7 +863,7 @@ formatter.match({
   "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
 });
 formatter.result({
-  "duration": 141400,
+  "duration": 136841,
   "status": "passed"
 });
 formatter.match({
@@ -860,7 +884,7 @@ formatter.match({
   "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
 });
 formatter.result({
-  "duration": 257714,
+  "duration": 230348,
   "status": "passed"
 });
 formatter.scenario({
@@ -901,7 +925,7 @@ formatter.match({
   "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
 });
 formatter.result({
-  "duration": 78683,
+  "duration": 66710,
   "status": "passed"
 });
 formatter.match({
@@ -914,7 +938,7 @@ formatter.match({
   "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
 });
 formatter.result({
-  "duration": 295344,
+  "duration": 141972,
   "status": "passed"
 });
 formatter.match({
@@ -935,7 +959,7 @@ formatter.match({
   "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
 });
 formatter.result({
-  "duration": 245170,
+  "duration": 242892,
   "status": "passed"
 });
 formatter.scenario({
@@ -976,7 +1000,7 @@ formatter.match({
   "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
 });
 formatter.result({
-  "duration": 61577,
+  "duration": 66709,
   "status": "passed"
 });
 formatter.match({
@@ -989,7 +1013,7 @@ formatter.match({
   "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
 });
 formatter.result({
-  "duration": 127716,
+  "duration": 147103,
   "status": "passed"
 });
 formatter.match({
@@ -1010,7 +1034,7 @@ formatter.match({
   "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
 });
 formatter.result({
-  "duration": 200697,
+  "duration": 211532,
   "status": "passed"
 });
 formatter.scenario({
@@ -1051,7 +1075,7 @@ formatter.match({
   "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
 });
 formatter.result({
-  "duration": 103770,
+  "duration": 67850,
   "status": "passed"
 });
 formatter.match({
@@ -1064,7 +1088,7 @@ formatter.match({
   "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
 });
 formatter.result({
-  "duration": 311309,
+  "duration": 151665,
   "status": "passed"
 });
 formatter.match({
@@ -1085,7 +1109,7 @@ formatter.match({
   "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
 });
 formatter.result({
-  "duration": 449288,
+  "duration": 3497415,
   "status": "passed"
 });
 formatter.scenario({
@@ -1126,7 +1150,7 @@ formatter.match({
   "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
 });
 formatter.result({
-  "duration": 68990,
+  "duration": 119165,
   "status": "passed"
 });
 formatter.match({
@@ -1139,7 +1163,7 @@ formatter.match({
   "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
 });
 formatter.result({
-  "duration": 155654,
+  "duration": 146533,
   "status": "passed"
 });
 formatter.match({
@@ -1160,7 +1184,7 @@ formatter.match({
   "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
 });
 formatter.result({
-  "duration": 267406,
+  "duration": 266269,
   "status": "passed"
 });
 formatter.scenario({
@@ -1201,7 +1225,7 @@ formatter.match({
   "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
 });
 formatter.result({
-  "duration": 97498,
+  "duration": 80393,
   "status": "passed"
 });
 formatter.match({
@@ -1214,7 +1238,7 @@ formatter.match({
   "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
 });
 formatter.result({
-  "duration": 176751,
+  "duration": 651132,
   "status": "passed"
 });
 formatter.match({
@@ -1235,7 +1259,7 @@ formatter.match({
   "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
 });
 formatter.result({
-  "duration": 449858,
+  "duration": 783412,
   "status": "passed"
 });
 formatter.scenario({
@@ -1276,7 +1300,7 @@ formatter.match({
   "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
 });
 formatter.result({
-  "duration": 77542,
+  "duration": 69561,
   "status": "passed"
 });
 formatter.match({
@@ -1289,7 +1313,7 @@ formatter.match({
   "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
 });
 formatter.result({
-  "duration": 157935,
+  "duration": 139691,
   "status": "passed"
 });
 formatter.match({
@@ -1310,7 +1334,7 @@ formatter.match({
   "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
 });
 formatter.result({
-  "duration": 293634,
+  "duration": 257146,
   "status": "passed"
 });
 formatter.scenario({
@@ -1351,7 +1375,7 @@ formatter.match({
   "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
 });
 formatter.result({
-  "duration": 72981,
+  "duration": 71841,
   "status": "passed"
 });
 formatter.match({
@@ -1364,7 +1388,7 @@ formatter.match({
   "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
 });
 formatter.result({
-  "duration": 163067,
+  "duration": 132279,
   "status": "passed"
 });
 formatter.match({
@@ -1385,7 +1409,7 @@ formatter.match({
   "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
 });
 formatter.result({
-  "duration": 248591,
+  "duration": 236050,
   "status": "passed"
 });
 formatter.scenario({
@@ -1426,7 +1450,7 @@ formatter.match({
   "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
 });
 formatter.result({
-  "duration": 75832,
+  "duration": 63289,
   "status": "passed"
 });
 formatter.match({
@@ -1439,7 +1463,7 @@ formatter.match({
   "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
 });
 formatter.result({
-  "duration": 158505,
+  "duration": 134560,
   "status": "passed"
 });
 formatter.match({
@@ -1460,7 +1484,7 @@ formatter.match({
   "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
 });
 formatter.result({
-  "duration": 305607,
+  "duration": 294207,
   "status": "passed"
 });
 formatter.scenario({
@@ -1501,7 +1525,7 @@ formatter.match({
   "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
 });
 formatter.result({
-  "duration": 70700,
+  "duration": 71841,
   "status": "passed"
 });
 formatter.match({
@@ -1514,7 +1538,7 @@ formatter.match({
   "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
 });
 formatter.result({
-  "duration": 150523,
+  "duration": 147104,
   "status": "passed"
 });
 formatter.match({
@@ -1535,7 +1559,7 @@ formatter.match({
   "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
 });
 formatter.result({
-  "duration": 300475,
+  "duration": 246883,
   "status": "passed"
 });
 formatter.scenario({
@@ -1576,7 +1600,7 @@ formatter.match({
   "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
 });
 formatter.result({
-  "duration": 78683,
+  "duration": 72411,
   "status": "passed"
 });
 formatter.match({
@@ -1589,7 +1613,7 @@ formatter.match({
   "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
 });
 formatter.result({
-  "duration": 155654,
+  "duration": 136270,
   "status": "passed"
 });
 formatter.match({
@@ -1610,7 +1634,7 @@ formatter.match({
   "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
 });
 formatter.result({
-  "duration": 259994,
+  "duration": 276532,
   "status": "passed"
 });
 formatter.scenario({
@@ -1651,7 +1675,7 @@ formatter.match({
   "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
 });
 formatter.result({
-  "duration": 1250937,
+  "duration": 2904440,
   "status": "passed"
 });
 formatter.match({
@@ -1664,7 +1688,7 @@ formatter.match({
   "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
 });
 formatter.result({
-  "duration": 152233,
+  "duration": 158507,
   "status": "passed"
 });
 formatter.match({
@@ -1685,7 +1709,7 @@ formatter.match({
   "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
 });
 formatter.result({
-  "duration": 315870,
+  "duration": 607229,
   "status": "passed"
 });
 formatter.scenario({
@@ -1726,7 +1750,7 @@ formatter.match({
   "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
 });
 formatter.result({
-  "duration": 87235,
+  "duration": 86095,
   "status": "passed"
 });
 formatter.match({
@@ -1739,7 +1763,7 @@ formatter.match({
   "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
 });
 formatter.result({
-  "duration": 1004056,
+  "duration": 2106773,
   "status": "passed"
 });
 formatter.match({
@@ -1760,7 +1784,7 @@ formatter.match({
   "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
 });
 formatter.result({
-  "duration": 278240,
+  "duration": 1632963,
   "status": "passed"
 });
 formatter.scenario({
@@ -1801,7 +1825,7 @@ formatter.match({
   "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
 });
 formatter.result({
-  "duration": 54165,
+  "duration": 61008,
   "status": "passed"
 });
 formatter.match({
@@ -1814,7 +1838,7 @@ formatter.match({
   "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
 });
 formatter.result({
-  "duration": 177320,
+  "duration": 233769,
   "status": "passed"
 });
 formatter.match({
@@ -1835,7 +1859,7 @@ formatter.match({
   "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
 });
 formatter.result({
-  "duration": 1132913,
+  "duration": 1081610,
   "status": "passed"
 });
 formatter.scenario({
@@ -1876,7 +1900,7 @@ formatter.match({
   "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
 });
 formatter.result({
-  "duration": 58156,
+  "duration": 53596,
   "status": "passed"
 });
 formatter.match({
@@ -1889,7 +1913,7 @@ formatter.match({
   "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
 });
 formatter.result({
-  "duration": 159646,
+  "duration": 148814,
   "status": "passed"
 });
 formatter.match({
@@ -1910,7 +1934,7 @@ formatter.match({
   "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
 });
 formatter.result({
-  "duration": 297055,
+  "duration": 257716,
   "status": "passed"
 });
 formatter.scenario({
@@ -1951,7 +1975,7 @@ formatter.match({
   "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
 });
 formatter.result({
-  "duration": 55876,
+  "duration": 54166,
   "status": "passed"
 });
 formatter.match({
@@ -1964,7 +1988,7 @@ formatter.match({
   "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
 });
 formatter.result({
-  "duration": 148242,
+  "duration": 124297,
   "status": "passed"
 });
 formatter.match({
@@ -1985,7 +2009,7 @@ formatter.match({
   "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
 });
 formatter.result({
-  "duration": 243459,
+  "duration": 226357,
   "status": "passed"
 });
 formatter.scenario({
@@ -2026,7 +2050,7 @@ formatter.match({
   "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
 });
 formatter.result({
-  "duration": 52455,
+  "duration": 62149,
   "status": "passed"
 });
 formatter.match({
@@ -2039,7 +2063,7 @@ formatter.match({
   "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
 });
 formatter.result({
-  "duration": 140260,
+  "duration": 148244,
   "status": "passed"
 });
 formatter.match({
@@ -2060,7 +2084,7 @@ formatter.match({
   "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
 });
 formatter.result({
-  "duration": 246880,
+  "duration": 240041,
   "status": "passed"
 });
 formatter.scenario({
@@ -2101,7 +2125,7 @@ formatter.match({
   "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
 });
 formatter.result({
-  "duration": 50744,
+  "duration": 59298,
   "status": "passed"
 });
 formatter.match({
@@ -2114,7 +2138,7 @@ formatter.match({
   "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
 });
 formatter.result({
-  "duration": 142541,
+  "duration": 147674,
   "status": "passed"
 });
 formatter.match({
@@ -2135,7 +2159,7 @@ formatter.match({
   "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
 });
 formatter.result({
-  "duration": 255433,
+  "duration": 224076,
   "status": "passed"
 });
 formatter.scenario({
@@ -2176,7 +2200,7 @@ formatter.match({
   "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
 });
 formatter.result({
-  "duration": 51315,
+  "duration": 63858,
   "status": "passed"
 });
 formatter.match({
@@ -2189,7 +2213,7 @@ formatter.match({
   "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
 });
 formatter.result({
-  "duration": 142541,
+  "duration": 147674,
   "status": "passed"
 });
 formatter.match({
@@ -2210,7 +2234,7 @@ formatter.match({
   "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
 });
 formatter.result({
-  "duration": 224074,
+  "duration": 215524,
   "status": "passed"
 });
 formatter.scenario({
@@ -2251,7 +2275,7 @@ formatter.match({
   "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
 });
 formatter.result({
-  "duration": 52455,
+  "duration": 56447,
   "status": "passed"
 });
 formatter.match({
@@ -2264,7 +2288,7 @@ formatter.match({
   "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
 });
 formatter.result({
-  "duration": 137980,
+  "duration": 126578,
   "status": "passed"
 });
 formatter.match({
@@ -2285,7 +2309,7 @@ formatter.match({
   "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
 });
 formatter.result({
-  "duration": 252012,
+  "duration": 238900,
   "status": "passed"
 });
 formatter.scenario({
@@ -2326,7 +2350,7 @@ formatter.match({
   "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
 });
 formatter.result({
-  "duration": 57586,
+  "duration": 47894,
   "status": "passed"
 });
 formatter.match({
@@ -2339,7 +2363,7 @@ formatter.match({
   "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
 });
 formatter.result({
-  "duration": 136269,
+  "duration": 114604,
   "status": "passed"
 });
 formatter.match({
@@ -2360,7 +2384,7 @@ formatter.match({
   "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
 });
 formatter.result({
-  "duration": 216092,
+  "duration": 235480,
   "status": "passed"
 });
 formatter.scenario({
@@ -2401,7 +2425,7 @@ formatter.match({
   "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
 });
 formatter.result({
-  "duration": 51315,
+  "duration": 57017,
   "status": "passed"
 });
 formatter.match({
@@ -2414,7 +2438,7 @@ formatter.match({
   "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
 });
 formatter.result({
-  "duration": 165917,
+  "duration": 140832,
   "status": "passed"
 });
 formatter.match({
@@ -2435,7 +2459,7 @@ formatter.match({
   "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
 });
 formatter.result({
-  "duration": 262274,
+  "duration": 254866,
   "status": "passed"
 });
 formatter.scenario({
@@ -2476,7 +2500,7 @@ formatter.match({
   "location": "MatrixStepdefs.WhenICreateMatrixProgramReturnsObjectMatrix()"
 });
 formatter.result({
-  "duration": 54165,
+  "duration": 56447,
   "status": "passed"
 });
 formatter.match({
@@ -2489,7 +2513,7 @@ formatter.match({
   "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
 });
 formatter.result({
-  "duration": 133418,
+  "duration": 132279,
   "status": "passed"
 });
 formatter.match({
@@ -2510,7 +2534,7 @@ formatter.match({
   "location": "MatrixStepdefs.iSeeOnReturnMatrixInRowAndPositionWithValue(int,int,int)"
 });
 formatter.result({
-  "duration": 220082,
+  "duration": 232629,
   "status": "passed"
 });
 formatter.uri("testPalindrom.feature");
@@ -2555,7 +2579,7 @@ formatter.match({
   "location": "PalindromStepdefs.iReverseString(String)"
 });
 formatter.result({
-  "duration": 1244664,
+  "duration": 42470153,
   "status": "passed"
 });
 formatter.match({
@@ -2568,7 +2592,7 @@ formatter.match({
   "location": "PalindromStepdefs.reversedStringIs(String)"
 });
 formatter.result({
-  "duration": 179031,
+  "duration": 387715,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -2670,7 +2694,7 @@ formatter.match({
   "location": "PalindromStepdefs.iCheckStringWithValue(String)"
 });
 formatter.result({
-  "duration": 228065,
+  "duration": 226927,
   "status": "passed"
 });
 formatter.match({
@@ -2683,7 +2707,7 @@ formatter.match({
   "location": "PalindromStepdefs.iGetTheResult(String)"
 });
 formatter.result({
-  "duration": 148812,
+  "duration": 187015,
   "status": "passed"
 });
 formatter.scenario({
@@ -2726,7 +2750,7 @@ formatter.match({
   "location": "PalindromStepdefs.iCheckStringWithValue(String)"
 });
 formatter.result({
-  "duration": 145961,
+  "duration": 156796,
   "status": "passed"
 });
 formatter.match({
@@ -2739,7 +2763,7 @@ formatter.match({
   "location": "PalindromStepdefs.iGetTheResult(String)"
 });
 formatter.result({
-  "duration": 113462,
+  "duration": 127717,
   "status": "passed"
 });
 formatter.scenario({
@@ -2782,7 +2806,7 @@ formatter.match({
   "location": "PalindromStepdefs.iCheckStringWithValue(String)"
 });
 formatter.result({
-  "duration": 207539,
+  "duration": 4121749,
   "status": "passed"
 });
 formatter.match({
@@ -2795,7 +2819,7 @@ formatter.match({
   "location": "PalindromStepdefs.iGetTheResult(String)"
 });
 formatter.result({
-  "duration": 79822,
+  "duration": 131709,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -2889,7 +2913,7 @@ formatter.match({
   "location": "PalindromStepdefs.iCheckPhraseWithValue(String)"
 });
 formatter.result({
-  "duration": 201267,
+  "duration": 224076,
   "status": "passed"
 });
 formatter.match({
@@ -2902,7 +2926,7 @@ formatter.match({
   "location": "PalindromStepdefs.iGetTheOutput(String)"
 });
 formatter.result({
-  "duration": 99779,
+  "duration": 116314,
   "status": "passed"
 });
 formatter.scenario({
@@ -2945,7 +2969,7 @@ formatter.match({
   "location": "PalindromStepdefs.iCheckPhraseWithValue(String)"
 });
 formatter.result({
-  "duration": 237188,
+  "duration": 247453,
   "status": "passed"
 });
 formatter.match({
@@ -2958,7 +2982,7 @@ formatter.match({
   "location": "PalindromStepdefs.iGetTheOutput(String)"
 });
 formatter.result({
-  "duration": 100919,
+  "duration": 88376,
   "status": "passed"
 });
 formatter.uri("testSnail.feature");
@@ -3002,7 +3026,7 @@ formatter.match({
   "location": "SnailStepdefs.iStartProgramSnail()"
 });
 formatter.result({
-  "duration": 1142035,
+  "duration": 65984479,
   "status": "passed"
 });
 formatter.match({
@@ -3015,7 +3039,7 @@ formatter.match({
   "location": "SnailStepdefs.iCreateMatrixWithSideValue(int)"
 });
 formatter.result({
-  "duration": 1641498,
+  "duration": 635168,
   "status": "passed"
 });
 formatter.match({
@@ -3032,7 +3056,7 @@ formatter.match({
   "location": "SnailStepdefs.currentPositionOfMaximumElementIs(int,int)"
 });
 formatter.result({
-  "duration": 911119,
+  "duration": 1019461,
   "status": "passed"
 });
 formatter.scenario({
@@ -3062,7 +3086,7 @@ formatter.match({
   "location": "SnailStepdefs.iStartProgramSnail()"
 });
 formatter.result({
-  "duration": 465823,
+  "duration": 89516,
   "status": "passed"
 });
 formatter.match({
@@ -3075,7 +3099,7 @@ formatter.match({
   "location": "SnailStepdefs.iCreateMatrixWithSideValue(int)"
 });
 formatter.result({
-  "duration": 338107,
+  "duration": 354645,
   "status": "passed"
 });
 formatter.match({
@@ -3092,7 +3116,7 @@ formatter.match({
   "location": "SnailStepdefs.currentPositionOfMaximumElementIs(int,int)"
 });
 formatter.result({
-  "duration": 187013,
+  "duration": 174472,
   "status": "passed"
 });
 formatter.scenario({
@@ -3122,7 +3146,7 @@ formatter.match({
   "location": "SnailStepdefs.iStartProgramSnail()"
 });
 formatter.result({
-  "duration": 72411,
+  "duration": 71841,
   "status": "passed"
 });
 formatter.match({
@@ -3135,7 +3159,7 @@ formatter.match({
   "location": "MatrixStepdefs.iCreateMatrixWithSize(int)"
 });
 formatter.result({
-  "duration": 157365,
+  "duration": 144253,
   "status": "passed"
 });
 formatter.match({
@@ -3148,7 +3172,7 @@ formatter.match({
   "location": "SnailStepdefs.programReturnsMatrixWithSize(int)"
 });
 formatter.result({
-  "duration": 258854,
+  "duration": 472670,
   "status": "passed"
 });
 formatter.scenario({
@@ -3185,7 +3209,7 @@ formatter.match({
   "location": "SnailStepdefs.iCreateMatrixWithSideValue(int)"
 });
 formatter.result({
-  "duration": 913971,
+  "duration": 424776,
   "status": "passed"
 });
 formatter.match({
@@ -3198,7 +3222,7 @@ formatter.match({
   "location": "SnailStepdefs.currentMaximumElementIs(int)"
 });
 formatter.result({
-  "duration": 157935,
+  "duration": 136270,
   "status": "passed"
 });
 formatter.uri("testSquare.feature");
@@ -3216,20 +3240,26 @@ formatter.feature({
   ]
 });
 formatter.scenario({
-  "line": 4,
+  "line": 5,
   "name": "001 The area of a square is side^2",
   "description": "",
   "id": "square;001-the-area-of-a-square-is-side^2",
   "type": "scenario",
-  "keyword": "Scenario"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 4,
+      "name": "@Non-static"
+    }
+  ]
 });
 formatter.step({
-  "line": 5,
+  "line": 6,
   "name": "I create Square with side 9 and coordinates 0,0",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 6,
+  "line": 7,
   "name": "Area of Square equals 81",
   "keyword": "Then "
 });
@@ -3251,7 +3281,7 @@ formatter.match({
   "location": "SquareStepdefs.iCreateSquareWithSideAndCoordinates(double,double,double)"
 });
 formatter.result({
-  "duration": 1268041,
+  "duration": 1554850,
   "status": "passed"
 });
 formatter.match({
@@ -3264,29 +3294,35 @@ formatter.match({
   "location": "SquareStepdefs.areaOfSquareEquals(double)"
 });
 formatter.result({
-  "duration": 196136,
+  "duration": 184165,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 8,
+  "line": 10,
   "name": "002 When I move the Square it changes coordinates by certain step",
   "description": "",
   "id": "square;002-when-i-move-the-square-it-changes-coordinates-by-certain-step",
   "type": "scenario",
-  "keyword": "Scenario"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 9,
+      "name": "@Non-static"
+    }
+  ]
 });
 formatter.step({
-  "line": 9,
+  "line": 11,
   "name": "I create Square with side 9 and coordinates 0,0",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 10,
+  "line": 12,
   "name": "I move Square by 1,2",
   "keyword": "When "
 });
 formatter.step({
-  "line": 11,
+  "line": 13,
   "name": "New Square coordinates are 1,2",
   "keyword": "Then "
 });
@@ -3308,7 +3344,7 @@ formatter.match({
   "location": "SquareStepdefs.iCreateSquareWithSideAndCoordinates(double,double,double)"
 });
 formatter.result({
-  "duration": 500603,
+  "duration": 299339,
   "status": "passed"
 });
 formatter.match({
@@ -3325,7 +3361,7 @@ formatter.match({
   "location": "SquareStepdefs.iMoveSquareBy(double,double)"
 });
 formatter.result({
-  "duration": 224644,
+  "duration": 230348,
   "status": "passed"
 });
 formatter.match({
@@ -3342,29 +3378,35 @@ formatter.match({
   "location": "SquareStepdefs.newSquareCoordinatesAre(double,double)"
 });
 formatter.result({
-  "duration": 1429968,
+  "duration": 316444,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 13,
+  "line": 16,
   "name": "003 When I resize Square its side changes by coefficient",
   "description": "",
   "id": "square;003-when-i-resize-square-its-side-changes-by-coefficient",
   "type": "scenario",
-  "keyword": "Scenario"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 15,
+      "name": "@Non-static"
+    }
+  ]
 });
 formatter.step({
-  "line": 14,
+  "line": 17,
   "name": "I create Square with side 9 and coordinates 0,0",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 15,
+  "line": 18,
   "name": "I resize square by coefficient 0.5",
   "keyword": "When "
 });
 formatter.step({
-  "line": 16,
+  "line": 19,
   "name": "Side equals 4.5",
   "keyword": "Then "
 });
@@ -3386,7 +3428,7 @@ formatter.match({
   "location": "SquareStepdefs.iCreateSquareWithSideAndCoordinates(double,double,double)"
 });
 formatter.result({
-  "duration": 1004056,
+  "duration": 268549,
   "status": "passed"
 });
 formatter.match({
@@ -3399,7 +3441,7 @@ formatter.match({
   "location": "SquareStepdefs.iResizeSquareByCoefficient(double)"
 });
 formatter.result({
-  "duration": 169908,
+  "duration": 162498,
   "status": "passed"
 });
 formatter.match({
@@ -3412,24 +3454,30 @@ formatter.match({
   "location": "SquareStepdefs.sideEquals(double)"
 });
 formatter.result({
-  "duration": 1838203,
+  "duration": 131139,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 18,
+  "line": 22,
   "name": "004 Square is instance of Figure",
   "description": "",
   "id": "square;004-square-is-instance-of-figure",
   "type": "scenario",
-  "keyword": "Scenario"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 21,
+      "name": "@Non-static"
+    }
+  ]
 });
 formatter.step({
-  "line": 19,
+  "line": 23,
   "name": "I create Square with side 9 and coordinates 0,0",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 20,
+  "line": 24,
   "name": "Square is instance of Figure",
   "keyword": "Then "
 });
@@ -3451,14 +3499,14 @@ formatter.match({
   "location": "SquareStepdefs.iCreateSquareWithSideAndCoordinates(double,double,double)"
 });
 formatter.result({
-  "duration": 250872,
+  "duration": 598677,
   "status": "passed"
 });
 formatter.match({
   "location": "SquareStepdefs.circleIsInstanceOfFigure()"
 });
 formatter.result({
-  "duration": 87235,
+  "duration": 143683,
   "status": "passed"
 });
 });
