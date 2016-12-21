@@ -36,15 +36,19 @@ public class TestAmazone {
     }
 
     @Test
+    //тест падает, т.к. действительно не все результаты поиска содержат искомое слово (по состоянию на 21/12/16)
     public void checkSearchContainsString() {
         WebElement searchInput = driver.findElement(By.id("twotabsearchtextbox"));
         String targetString = "duck";
         searchInput.sendKeys(targetString);
         WebElement searchButton = driver.findElement(By.xpath(".//span[@id='nav-search-submit-text']/following-sibling::input"));
         searchButton.click();
-        String searchResults = driver.findElement(By.xpath(".//h2[contains(@class, 's-access-title')]")).getText().toLowerCase();
-        Assert.assertTrue("Search results do not contain " + targetString, searchResults.contains(targetString));
-        driver.quit();
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        List<WebElement> searchResults = driver.findElements(By.xpath(".//h2[contains(@class, 's-access-title')]"));
+        for (WebElement searchResult: searchResults){
+            String searchResultText = searchResult.getText().toLowerCase();
+            Assert.assertTrue("Search result " + searchResultText + " does not contain " + targetString, searchResultText.contains(targetString));
+        }
     }
 
     @Test
@@ -168,6 +172,7 @@ public class TestAmazone {
     }
 
     @Test
+    //логинимся и проверяем, что имя юзера появилось в шапке
     public void checkLogin() {
         WebElement yourAmazon = driver.findElement(By.id("nav-your-amazon"));
         yourAmazon.click();
