@@ -14,6 +14,8 @@ import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by olenka on 17.12.2016.
@@ -37,7 +39,7 @@ public class TestAmazone {
 
     @Test
     //тест падает, т.к. действительно не все результаты поиска содержат искомое слово (по состоянию на 21/12/16)
-    public void checkSearchContainsString() {
+    public void checkSearchResultsContainString() {
         WebElement searchInput = driver.findElement(By.id("twotabsearchtextbox"));
         String targetString = "duck";
         searchInput.sendKeys(targetString);
@@ -47,7 +49,7 @@ public class TestAmazone {
         List<WebElement> searchResults = driver.findElements(By.xpath(".//h2[contains(@class, 's-access-title')]"));
         for (WebElement searchResult: searchResults){
             String searchResultText = searchResult.getText().toLowerCase();
-            Assert.assertTrue("Search result " + searchResultText + " does not contain " + targetString, searchResultText.contains(targetString));
+            Assert.assertTrue("Search result " + searchResultText + " does not contain substring" + targetString, searchResultText.contains(targetString));
         }
     }
 
@@ -58,11 +60,20 @@ public class TestAmazone {
         searchInput.sendKeys(targetString);
         WebElement searchButton = driver.findElement(By.xpath(".//span[@id='nav-search-submit-text']/following-sibling::input"));
         searchButton.click();
-        int numberOfGeneralSearchResults = driver.findElement(By.xpath(".//h2[contains(@class, 's-access-title')]")).getSize().getWidth();
+        WebElement searchResultsString = driver.findElement(By.id("s-result-count"));
+        Pattern p = Pattern.compile("of\\s(.*)\\sresults");
+        Matcher m = p.matcher(searchResultsString.getText());
+        m.find();
+        int numberOfSearchResults = Integer.parseInt(m.group(1).replaceAll(",",""));
+
         WebElement category = driver.findElement(By.xpath(".//p[text()='Baby Products']"));
         category.click();
-        int numberOfCategorySearchResults = driver.findElement(By.xpath(".//h2[contains(@class, 's-access-title')]")).getSize().getWidth();
-        Assert.assertTrue("Number of search results in category is greater than number of total results", numberOfGeneralSearchResults >= numberOfCategorySearchResults);
+        WebElement searchResultsString1 = driver.findElement(By.id("s-result-count"));
+        Pattern p1 = Pattern.compile("of\\s(.*)\\sresults");
+        Matcher m1 = p.matcher(searchResultsString1.getText());
+        m1.find();
+        int numberOfSearchResultsByCategory = Integer.parseInt(m1.group(1).replaceAll(",",""));
+        Assert.assertTrue("Number of search results in category is greater than number of total results", numberOfSearchResults >= numberOfSearchResultsByCategory);
     }
 
     @Test
@@ -82,7 +93,7 @@ public class TestAmazone {
         addToCart1.click();
         //second product:
         WebElement searchInput2 = driver.findElement(By.id("twotabsearchtextbox"));
-        String secondTargetString = "duck";
+        String secondTargetString = "Duck Commander Bobble Head";
         searchInput2.sendKeys(secondTargetString);
         WebElement searchButton2 = driver.findElement(By.xpath(".//span[@id='nav-search-submit-text']/following-sibling::input"));
         searchButton2.click();
@@ -124,56 +135,44 @@ public class TestAmazone {
         books.click();
         List<WebElement> bookOffers1 = driver.findElements(By.xpath(".//li[contains(@class, 'a-carousel-card')]"));
         bookOffers1.get(0).click();
-        String firstTitleInCart = driver.findElement(By.id("productTitle")).getText();
         WebElement addToCart1 = driver.findElement(By.id("add-to-cart-button"));
         addToCart1.click();
         driver.navigate().back();
         driver.navigate().back();
         List<WebElement> bookOffers2 = driver.findElements(By.xpath(".//li[contains(@class, 'a-carousel-card')]"));
         bookOffers2.get(1).click();
-        String secondTitleInCart = driver.findElement(By.id("productTitle")).getText();
         WebElement addToCart2 = driver.findElement(By.id("add-to-cart-button"));
         addToCart2.click();
         driver.navigate().back();
         driver.navigate().back();
         List<WebElement> bookOffers3 = driver.findElements(By.xpath(".//li[contains(@class, 'a-carousel-card')]"));
         bookOffers3.get(2).click();
-        String thirdTitleInCart = driver.findElement(By.id("productTitle")).getText();
         WebElement addToCart3 = driver.findElement(By.id("add-to-cart-button"));
         addToCart3.click();
         WebElement goToCart = driver.findElement(By.id("nav-cart"));
         goToCart.click();
-        List<WebElement> inCartBeforeDeleting = driver.findElements(By.xpath(".//div[@data-action='delete']//span[@class='sc-product-title']"));
-        String actualTitle1 = inCartBeforeDeleting.get(0).getAttribute("innerHTML").trim();
-        String actualTitle2 = inCartBeforeDeleting.get(1).getAttribute("innerHTML").trim();
-        String actualTitle3 = inCartBeforeDeleting.get(2).getAttribute("innerHTML").trim();
-        String[] actualTitles = {actualTitle1, actualTitle2, actualTitle3};
-        Assert.assertTrue("First title is incorrect", Arrays.asList(actualTitles).contains(firstTitleInCart));
-        Assert.assertTrue("Second title is incorrect", Arrays.asList(actualTitles).contains(secondTitleInCart));
-        Assert.assertTrue("Third title is incorrect", Arrays.asList(actualTitles).contains(thirdTitleInCart));
         //deleting third item
-        List<WebElement> deleteCheckboxes = driver.findElements(By.xpath(".//div[@class='sc-list-item-content']//input[@value='Delete']"));
-        deleteCheckboxes.get(2).click();
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        List titlesAfterDeletionArray = new ArrayList(3);
-        List<WebElement> inCartAfterDeletion = driver.findElements(By.xpath(".//div[@class='sc-list-item-content']//span[contains(@class, 'a-list-item')]//span[contains(@class, 'sc-product-title')]"));
-        Iterator<WebElement> itr = inCartAfterDeletion.iterator();
-        while (itr.hasNext()){
-            titlesAfterDeletionArray.add(itr.next().getAttribute("innerHTML").trim());
-        }
-        String actTitleAfterDeletion1 = inCartAfterDeletion.get(0).getAttribute("innerHTML").trim();
-        String actTitleAfterDeletion2 = inCartAfterDeletion.get(1).getAttribute("innerHTML").trim();
+        List<WebElement> inCartBeforeDeletion = driver.findElements(By.xpath(".//div[@class='sc-list-item-content']//span[contains(@class, 'a-list-item')]//span[contains(@class, 'sc-product-title')]"));
 
-        String[] actTitlesAfterDeletion = {actTitleAfterDeletion1, actTitleAfterDeletion2};
-        System.out.println(inCartAfterDeletion.size());
-        Assert.assertFalse("Cart still contains deleted item", Arrays.asList(titlesAfterDeletionArray).contains(actualTitle3));
-        Assert.assertTrue("Number of products in cart after deletion is incorrect", titlesAfterDeletionArray.size() == 2);
+        List<WebElement> deleteCheckboxes = driver.findElements(By.xpath(".//div[@class='sc-list-item-content']//input[@value='Delete']"));
+        String deletedItem = inCartBeforeDeletion.get(2).getText();
+        deleteCheckboxes.get(2).click();
+        List<WebElement> inCartAfterDeletion = driver.findElements(By.xpath(".//div[@class='sc-list-item-content']//span[contains(@class, 'a-list-item')]//span[contains(@class, 'sc-product-title')]"));
+        List inCartTitles = new ArrayList(3);
+        for (WebElement item: inCartAfterDeletion) {
+            System.out.println(inCartTitles);
+            inCartTitles.add(item.getAttribute("innerHTML").trim());
+        }
+        Assert.assertFalse("Cart still contains deleted item", Arrays.asList(inCartTitles).contains(deletedItem));
+        Assert.assertTrue("Number of products in cart after deletion is incorrect", inCartAfterDeletion.size() == 2);
 
     }
 
     @Test
     //логинимся и проверяем, что имя юзера появилось в шапке
     public void checkLogin() {
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         WebElement yourAmazon = driver.findElement(By.id("nav-your-amazon"));
         yourAmazon.click();
         WebElement email = driver.findElement(By.id("ap_email"));
