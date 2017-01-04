@@ -42,9 +42,9 @@ public class TestStackoverflow {
 
     @Test
     public void checkSocialAuthorizationBlocksArePresent() {
-        WebElement signUpButton = driver.findElement(By.id("tell-me-more"));
-        signUpButton.click();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        WebElement signUpButton = driver.findElement(By.xpath(".//a[2][@class='login-link']"));
+        signUpButton.click();
         Assert.assertTrue("Page does not have Google Authorization icon", driver.findElements(By.className("google-login")).size()>0);
         Assert.assertTrue("Page does not have Facebook Authorization icon", driver.findElements(By.className("facebook-login")).size()>0);
     }
