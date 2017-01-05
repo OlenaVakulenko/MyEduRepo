@@ -8,11 +8,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
 
 import java.text.NumberFormat;
 import java.text.ParseException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -125,30 +127,37 @@ public class TestAmazone {
 
     @Test
     public void checkDeletingProductsFromCart() {
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        WebElement departments = driver.findElement(By.xpath(".//*[@id='nav-main']//span[text()='Departments']"));
-        Actions action = new Actions(driver);
-        action.moveToElement(departments).build().perform();
-        WebElement allCategoris = driver.findElement(By.xpath(".//span[@class='nav-text' and text()='Full Store Directory']"));
-        allCategoris.click();
-        WebElement books = driver.findElement(By.xpath(".//a[text()='Books']"));
-        books.click();
-        List<WebElement> bookOffers1 = driver.findElements(By.xpath(".//li[contains(@class, 'a-carousel-card')]"));
-        bookOffers1.get(0).click();
+        //first product:
+        WebElement searchInput1 = driver.findElement(By.id("twotabsearchtextbox"));
+        String firstTargetString = "knife kitchen";
+        searchInput1.sendKeys(firstTargetString);
+        WebElement searchButton1 = driver.findElement(By.xpath(".//span[@id='nav-search-submit-text']/following-sibling::input"));
+        searchButton1.click();
+        WebElement firstProduct = driver.findElement(By.xpath(".//h2[contains(@class, 's-access-title') and contains(text(), '8 Inch')]"));
+        firstProduct.click();
         WebElement addToCart1 = driver.findElement(By.id("add-to-cart-button"));
         addToCart1.click();
-        driver.navigate().back();
-        driver.navigate().back();
-        List<WebElement> bookOffers2 = driver.findElements(By.xpath(".//li[contains(@class, 'a-carousel-card')]"));
-        bookOffers2.get(1).click();
+        //second product:
+        WebElement searchInput2 = driver.findElement(By.id("twotabsearchtextbox"));
+        String secondTargetString = "Duck Commander Bobble Head";
+        searchInput2.sendKeys(secondTargetString);
+        WebElement searchButton2 = driver.findElement(By.xpath(".//span[@id='nav-search-submit-text']/following-sibling::input"));
+        searchButton2.click();
+        WebElement secondProduct = driver.findElement(By.className("s-access-title"));
+        secondProduct.click();
         WebElement addToCart2 = driver.findElement(By.id("add-to-cart-button"));
         addToCart2.click();
-        driver.navigate().back();
-        driver.navigate().back();
-        List<WebElement> bookOffers3 = driver.findElements(By.xpath(".//li[contains(@class, 'a-carousel-card')]"));
-        bookOffers3.get(2).click();
+        //third product
+        WebElement searchInput3 = driver.findElement(By.id("twotabsearchtextbox"));
+        String thirdTargetString = "Duck Commander Bobble Head (Si)";
+        searchInput3.sendKeys(thirdTargetString);
+        WebElement searchButton3 = driver.findElement(By.xpath(".//span[@id='nav-search-submit-text']/following-sibling::input"));
+        searchButton3.click();
+        WebElement thirdProduct = driver.findElement(By.className("s-access-title"));
+        thirdProduct.click();
         WebElement addToCart3 = driver.findElement(By.id("add-to-cart-button"));
         addToCart3.click();
+        //go to cart
         WebElement goToCart = driver.findElement(By.id("nav-cart"));
         goToCart.click();
         //deleting third item
