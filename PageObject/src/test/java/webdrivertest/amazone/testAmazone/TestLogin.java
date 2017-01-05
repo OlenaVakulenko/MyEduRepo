@@ -1,4 +1,4 @@
-package webdrivertest.amazone.amazoneMapping.testAmazone;
+package webdrivertest.amazone.testAmazone;
 
 import org.junit.*;
 import org.openqa.selenium.WebDriver;

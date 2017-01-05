@@ -1,101 +1,116 @@
-package webdrivertest.amazone.testAmazone;
+package amazone.stepdefinitions;
 
-import org.junit.After;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import webdrivertest.amazone.amazoneMapping.*;
+import ui_bdd.amazone.amazoneMapping.*;
 
 import java.text.ParseException;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by olenka on 24.12.2016.
+ * Created by olenka on 05.01.2017.
  */
-public class TestCartPage {
+public class CartPageStepdefs extends BasePagesStepdefs{
 
-    public static WebDriver driver;
     public static StartPage startPage;
     public static SearchResultsPage searchResultsPage;
     public static ProductDetailPage productDetailPage;
     public static CartPage cartPage;
     public static CatalogPage catalogPage;
-    public static BooksCategoryPage booksCategoryPage;
+    public  static BooksCategoryPage booksCategoryPage;
+    String firstProductTitle;
+    double firstProductPrice;
+    String secondProductTitle;
+    double secondProductPrice;
+    String thirdProductTitle;
+    String deletedItem;
 
 
-    @Before
+
+    @Before("@CartPage")
     public void setupStartConditions() {
-        driver = new FirefoxDriver();
+        super.setupBrowser();
         startPage = new StartPage(driver);
         searchResultsPage = new SearchResultsPage(driver);
         productDetailPage = new ProductDetailPage(driver);
         cartPage = new CartPage(driver);
         catalogPage = new CatalogPage(driver);
         booksCategoryPage = new BooksCategoryPage(driver);
-        driver.manage().window().maximize();
-        driver.get("https://www.amazon.com/");
     }
 
-   @After
+    @After ("@CartPage")
     public void quitDriver() {
         driver.quit();
     }
 
-    @Test
-    public void checkAddProductsToCart() throws ParseException {
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        //finding first product, adding in to the cart
+    @When("^I add product1 to cart$")
+    public void iAddProduct1ToCart() throws ParseException {
         startPage.searchInput.sendKeys("knife kitchen");
         startPage.searchButton.click();
         searchResultsPage.eightInchKnife.click();
-        String firstProductTitle = productDetailPage.productTitle.getText();
-        double firstProductPrice = productDetailPage.getProductPrice();
+        firstProductTitle = productDetailPage.productTitle.getText();
+        firstProductPrice = productDetailPage.getProductPrice();
         productDetailPage.addToCartButton.click();
-        //finding second product, adding in to the cart
+    }
+
+    @And("^I add product2 to cart$")
+    public void iAddProduct2ToCart() throws Throwable {
         startPage.searchInput.sendKeys("Duck Commander Bobble Head");
         startPage.searchButton.click();
         searchResultsPage.searchResults.get(0).click();
-        String secondProductTitle = productDetailPage.productTitle.getText();
-        double secondProductPrice = productDetailPage.getProductPrice();
+        secondProductTitle = productDetailPage.productTitle.getText();
+        secondProductPrice = productDetailPage.getProductPrice();
         productDetailPage.addToCartButton.click();
-        //go to cart and check products inside
+    }
+
+    @And("^I add product3 to cart$")
+    public void iAddProduct3ToCart() {
+        startPage.searchInput.sendKeys("Duck Commander Bobble Head (Si)");
+        startPage.searchButton.click();
+        searchResultsPage.searchResults.get(0).click();
+        thirdProductTitle = productDetailPage.productTitle.getText();
+        productDetailPage.addToCartButton.click();
+    }
+
+    @Then("^I see titles of these products in the cart$")
+    public void iSeeTitlesOfTheseProductsInTheCart() throws Throwable {
         cartPage.cart.click();
         Assert.assertEquals("Number of products in cart is incorrect", 2, cartPage.productsInCart.size());
         Assert.assertTrue("First title of product in cart is incorrect", cartPage.getProductTitlesInCart().contains(firstProductTitle));
         Assert.assertTrue("Second title of product in cart is incorrect",cartPage.getProductTitlesInCart().contains(secondProductTitle));
+    }
+
+    @And("^Total price equals to product1 price plus product2 price$")
+    public void totalPriceEqualsToProductPriceProductPrice() throws Throwable {
         Assert.assertTrue("First price of product in cart is incorrect",cartPage.getProductPricesInCart().contains(firstProductPrice));
         Assert.assertTrue("Second price of product in cart is incorrect",cartPage.getProductPricesInCart().contains(secondProductPrice));
         Assert.assertEquals("Total price is incorrect", cartPage.getTotalPrice(),firstProductPrice + secondProductPrice, 0.1);
     }
 
-    @Test
-    public void checkDeletingProductsFromCart() {
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        //choose 1-st book
-        startPage.searchInput.sendKeys("knife kitchen");
-        startPage.searchButton.click();
-        searchResultsPage.eightInchKnife.click();
-        productDetailPage.addToCartButton.click();
-        //choose 2-nd book
-        startPage.searchInput.sendKeys("Duck Commander Bobble Head");
-        startPage.searchButton.click();
-        searchResultsPage.searchResults.get(0).click();
-        productDetailPage.addToCartButton.click();
-        //choose 3-rd book
-        startPage.searchInput.sendKeys("Duck Commander Bobble Head (Si)");
-        startPage.searchButton.click();
-        searchResultsPage.searchResults.get(0).click();
-        productDetailPage.addToCartButton.click();
-        //go to cart and delete third book
+    @And("^I go to cart$")
+    public void iGoToCart() throws Throwable {
         cartPage.cart.click();
-        String deletedItem = cartPage.productsInCart.get(2).getText();
+    }
+
+    @And("^I delete third product from cart$")
+    public void iDeleteThirdProductFromCart() throws Throwable {
+        cartPage.cart.click();
+        deletedItem = cartPage.productsInCart.get(2).getText();
         cartPage.deleteCheckboxes.get(2).click();
-        // assure cart contains 2 items and doesn't contain deleted item
+    }
+
+    @Then("^This product is not present in the cart$")
+    public void thisProductIsNotPresentInTheCart() throws Throwable {
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         System.out.println(cartPage.productsInCart);
         Assert.assertFalse("Deleted item is still in the cart", cartPage.getProductTitlesInCart().contains(deletedItem));
         Assert.assertEquals(2, cartPage.productsInCart.size());
     }
+
+
 }
 

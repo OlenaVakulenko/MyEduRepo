@@ -1,9 +1,8 @@
-package webdrivertest.amazone.amazoneMapping;
+package ui_bdd.amazone.amazoneMapping;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 import java.text.NumberFormat;
 import java.text.ParseException;
@@ -14,13 +13,10 @@ import java.util.Locale;
 /**
  * Created by olenka on 24.12.2016.
  */
-public class CartPage {
+public class CartPage extends BasePage {
 
-    private WebDriver driver;
-
-    public CartPage (WebDriver driver) {
-        PageFactory.initElements(driver, this);
-        this.driver = driver;
+    public CartPage(WebDriver driver) {
+        super(driver);
     }
 
     @FindBy (xpath = ".//div[contains(@class, 'sc-list-item-content')]//span[contains(@class, 'sc-product-title')]")
@@ -44,11 +40,9 @@ public class CartPage {
     }
 
     public List getProductTitlesInCart() {
-        System.out.println(productsInCart.size());
         List listOfProductsInCart = new ArrayList(30);
         for(WebElement item: productsInCart) {
             listOfProductsInCart.add(item.getText());
-            System.out.println(item.getText());
         }
         return listOfProductsInCart;
     }
