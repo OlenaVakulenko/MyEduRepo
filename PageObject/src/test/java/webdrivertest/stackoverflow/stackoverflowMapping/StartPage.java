@@ -28,12 +28,6 @@ public class StartPage {
     @FindBy (xpath = ".//a[2][@class='login-link']")
     public WebElement loginButton;
 
-    @FindBy (className = "google-login")
-    public List<WebElement> google;
-
-    @FindBy (className = "facebook-login")
-    public List<WebElement> facebook;
-
     @FindBy (className = "question-hyperlink")
     public WebElement topQuestion;
 

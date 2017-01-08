@@ -1,4 +1,4 @@
-package amazone.testrunner;
+package stackoverflow.testrunner;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
@@ -11,10 +11,10 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {"html:target/cucumber-report/nixreport"},
-        features = "src/test/java/amazone/features",
-        glue ="amazone.stepdefinitions",
+        features = "src/test/java/stackoverflow/features",
+        glue ="stackoverflow.stepdefinitions",
         tags = {}
         )
 
-public class AmazonTestRunner{
+public class StackoverflowTestRunner {
 }

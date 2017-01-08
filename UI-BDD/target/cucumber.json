@@ -6,195 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 32568362368,
-              "status": "passed"
-            },
-            "match": {
-              "location": "CartPageStepdefs.setupStartConditions()"
-            }
-          }
-        ],
-        "line": 4,
-        "name": "001 When I add products to cart they appear in cart with correct price",
-        "description": "",
-        "id": "cartpage;001-when-i-add-products-to-cart-they-appear-in-cart-with-correct-price",
-        "after": [
-          {
-            "result": {
-              "duration": 4478075589,
-              "status": "passed"
-            },
-            "match": {
-              "location": "CartPageStepdefs.quitDriver()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 18853250560,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "I add product1 to cart",
-            "match": {
-              "location": "CartPageStepdefs.iAddProduct1ToCart()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 18180305576,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "I add product2 to cart",
-            "match": {
-              "location": "CartPageStepdefs.iAddProduct2ToCart()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 3769564055,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "I see titles of these products in the cart",
-            "match": {
-              "location": "CartPageStepdefs.iSeeTitlesOfTheseProductsInTheCart()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 408944350,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "Total price equals to product1 price plus product2 price",
-            "match": {
-              "location": "CartPageStepdefs.totalPriceEqualsToProductPriceProductPrice()"
-            },
-            "keyword": "And "
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 22176751715,
-              "status": "passed"
-            },
-            "match": {
-              "location": "CartPageStepdefs.setupStartConditions()"
-            }
-          }
-        ],
-        "line": 10,
-        "name": "002 When I delete product from cart it disappears from cart",
-        "description": "",
-        "id": "cartpage;002-when-i-delete-product-from-cart-it-disappears-from-cart",
-        "after": [
-          {
-            "result": {
-              "duration": 1928578393,
-              "status": "passed"
-            },
-            "match": {
-              "location": "CartPageStepdefs.quitDriver()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 15072587032,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "I add product1 to cart",
-            "match": {
-              "location": "CartPageStepdefs.iAddProduct1ToCart()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 15758551817,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "I add product2 to cart",
-            "match": {
-              "location": "CartPageStepdefs.iAddProduct2ToCart()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 13495461173,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "I add product3 to cart",
-            "match": {
-              "location": "CartPageStepdefs.iAddProduct3ToCart()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 5246685752,
-              "status": "passed"
-            },
-            "line": 14,
-            "name": "I delete third product from cart",
-            "match": {
-              "location": "CartPageStepdefs.iDeleteThirdProductFromCart()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 2044113949,
-              "status": "passed"
-            },
-            "line": 15,
-            "name": "This product is not present in the cart",
-            "match": {
-              "location": "CartPageStepdefs.thisProductIsNotPresentInTheCart()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      }
-    ],
-    "name": "CartPage",
-    "description": "",
-    "id": "cartpage",
-    "keyword": "Feature",
-    "uri": "CartPageTest.feature",
-    "tags": [
-      {
-        "line": 1,
-        "name": "@CartPage"
-      }
-    ]
-  },
-  {
-    "line": 2,
-    "elements": [
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 21951859519,
+              "duration": 19706350632,
               "status": "passed"
             },
             "match": {
@@ -202,14 +14,14 @@
             }
           }
         ],
-        "line": 4,
-        "name": "001 When I login with certain credentials I see username in header",
+        "line": 3,
+        "name": "001 Social authorization blocks are present on a login page",
         "description": "",
-        "id": "loginpage;001-when-i-login-with-certain-credentials-i-see-username-in-header",
+        "id": "loginpage;001-social-authorization-blocks-are-present-on-a-login-page",
         "after": [
           {
             "result": {
-              "duration": 2281619986,
+              "duration": 2039575632,
               "status": "passed"
             },
             "match": {
@@ -222,79 +34,25 @@
         "steps": [
           {
             "result": {
-              "duration": 794779764,
+              "duration": 583245954,
               "status": "passed"
             },
-            "line": 5,
-            "name": "I go to login page",
+            "line": 4,
+            "name": "I click on LoginButton in header",
             "match": {
-              "location": "LoginPageStepdefs.iGoToLoginPage()"
+              "location": "LoginPageStepdefs.iClickOnLoginButtonInHeader()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 4573162617,
+              "duration": 1367126282,
               "status": "passed"
             },
-            "line": 6,
-            "name": "I set email to \"lena-test-01@ya.ru\"",
+            "line": 5,
+            "name": "I see google and facebook authorization block on a login page",
             "match": {
-              "arguments": [
-                {
-                  "val": "lena-test-01@ya.ru",
-                  "offset": 16
-                }
-              ],
-              "location": "LoginPageStepdefs.iSetEmailTo(String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 409670745,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "I set password to \"gfhjkm13\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "gfhjkm13",
-                  "offset": 19
-                }
-              ],
-              "location": "LoginPageStepdefs.iSetPasswordTo(String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 3962940177,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "I click LoginButton",
-            "match": {
-              "location": "LoginPageStepdefs.iClickLoginButton()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 806097041,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "I see username \"olena\" in page header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "olena",
-                  "offset": 16
-                }
-              ],
-              "location": "LoginPageStepdefs.iSeeUsernameInPageHeader(String)"
+              "location": "LoginPageStepdefs.iSeeGoogleAndFacebookAuthorizationBlockOnALoginPage()"
             },
             "keyword": "Then "
           }
@@ -305,7 +63,7 @@
     "description": "",
     "id": "loginpage",
     "keyword": "Feature",
-    "uri": "LoginTest.feature",
+    "uri": "LoginPage.feature",
     "tags": [
       {
         "line": 1,
@@ -314,32 +72,32 @@
     ]
   },
   {
-    "line": 2,
+    "line": 3,
     "elements": [
       {
         "before": [
           {
             "result": {
-              "duration": 17186306601,
+              "duration": 16982664493,
               "status": "passed"
             },
             "match": {
-              "location": "SearchResultsPageStepdefs.setupStartConditions()"
+              "location": "QuestionPageStepdefs.setupStartConditions()"
             }
           }
         ],
-        "line": 3,
-        "name": "001 If I enter \"duck\" to search input all results on Search Results page contain \"duck\"",
+        "line": 4,
+        "name": "001 Top questions are asked today",
         "description": "",
-        "id": "searchresultspage;001-if-i-enter-\"duck\"-to-search-input-all-results-on-search-results-page-contain-\"duck\"",
+        "id": "questionpage;001-top-questions-are-asked-today",
         "after": [
           {
             "result": {
-              "duration": 1832792908,
+              "duration": 1381603517,
               "status": "passed"
             },
             "match": {
-              "location": "SearchResultsPageStepdefs.quitDriver()"
+              "location": "QuestionPageStepdefs.quitDriver()"
             }
           }
         ],
@@ -348,50 +106,109 @@
         "steps": [
           {
             "result": {
-              "duration": 1093939849,
+              "duration": 425440615,
               "status": "passed"
             },
-            "line": 4,
-            "name": "I enter \"duck\" to search input",
+            "line": 5,
+            "name": "I click on a top question from the start page",
             "match": {
-              "arguments": [
-                {
-                  "val": "duck",
-                  "offset": 9
-                }
-              ],
-              "location": "SearchResultsPageStepdefs.iEnterSmtToSearchInput(String)"
+              "location": "QuestionPageStepdefs.iClickOnATopQuestionFromTheStartPage()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 7487815210,
+              "duration": 3798708789,
               "status": "passed"
             },
-            "line": 5,
-            "name": "I click Search Button",
-            "match": {
-              "location": "SearchResultsPageStepdefs.iClickSearchButton()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 207754066,
-              "error_message": "java.lang.AssertionError: Search result cloudnine kid backpack animal design does not contain duck\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat amazone.stepdefinitions.SearchResultsPageStepdefs.allSearchResultsContainQuery(SearchResultsPageStepdefs.java:54)\r\n\tat ✽.Then All search results contain query \"duck\"(SearchResultsPageTest.feature:6)\r\n",
-              "status": "failed"
-            },
             "line": 6,
-            "name": "All search results contain query \"duck\"",
+            "name": "Date of issue on the question page is \"today\"",
             "match": {
               "arguments": [
                 {
-                  "val": "duck",
-                  "offset": 34
+                  "val": "today",
+                  "offset": 39
                 }
               ],
-              "location": "SearchResultsPageStepdefs.allSearchResultsContainQuery(String)"
+              "location": "QuestionPageStepdefs.dateOfIssueOnTheQuestionPageIs(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "QuestionPage",
+    "description": "",
+    "id": "questionpage",
+    "keyword": "Feature",
+    "uri": "QuestionPage.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@QuestionPage"
+      }
+    ]
+  },
+  {
+    "line": 3,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 18105842153,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StartPageStepdefs.setupStartConditions()"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "001 Number of featured questions is greater than 300",
+        "description": "",
+        "id": "startpage;001-number-of-featured-questions-is-greater-than-300",
+        "after": [
+          {
+            "result": {
+              "duration": 1465613217,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StartPageStepdefs.quitDriver()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 36491,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I am on a start page",
+            "match": {
+              "location": "StartPageStepdefs.iAmOnAStartPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 128537846,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Number of featured questions is greater than 300",
+            "match": {
+              "arguments": [
+                {
+                  "val": "300",
+                  "offset": 45
+                }
+              ],
+              "location": "StartPageStepdefs.numberOfFeaturedQuestionsIsGreaterThan(int)"
             },
             "keyword": "Then "
           }
@@ -401,26 +218,26 @@
         "before": [
           {
             "result": {
-              "duration": 17190750496,
+              "duration": 18399137444,
               "status": "passed"
             },
             "match": {
-              "location": "SearchResultsPageStepdefs.setupStartConditions()"
+              "location": "StartPageStepdefs.setupStartConditions()"
             }
           }
         ],
         "line": 9,
-        "name": "002 Number of search results in subcategory is less than number of search results in general search",
+        "name": "002 Max salary in advertisement block is greater than 60k",
         "description": "",
-        "id": "searchresultspage;002-number-of-search-results-in-subcategory-is-less-than-number-of-search-results-in-general-search",
+        "id": "startpage;002-max-salary-in-advertisement-block-is-greater-than-60k",
         "after": [
           {
             "result": {
-              "duration": 1577541512,
+              "duration": 1776784538,
               "status": "passed"
             },
             "match": {
-              "location": "SearchResultsPageStepdefs.quitDriver()"
+              "location": "StartPageStepdefs.quitDriver()"
             }
           }
         ],
@@ -429,70 +246,136 @@
         "steps": [
           {
             "result": {
-              "duration": 934804065,
+              "duration": 50175,
               "status": "passed"
             },
             "line": 10,
-            "name": "I enter \"duck\" to search input",
+            "name": "I am on a start page",
             "match": {
-              "arguments": [
-                {
-                  "val": "duck",
-                  "offset": 9
-                }
-              ],
-              "location": "SearchResultsPageStepdefs.iEnterSmtToSearchInput(String)"
+              "location": "StartPageStepdefs.iAmOnAStartPage()"
             },
-            "keyword": "When "
+            "keyword": "Given "
           },
           {
             "result": {
-              "duration": 4930202233,
+              "duration": 318119436,
               "status": "passed"
             },
             "line": 11,
-            "name": "I click Search Button",
+            "name": "Max salary in advertisement block is greater than 60k",
             "match": {
-              "location": "SearchResultsPageStepdefs.iClickSearchButton()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 6590153073,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "I click on BabyProducts subcategory",
-            "match": {
-              "location": "SearchResultsPageStepdefs.iClickOnBabyProductsSubcategory()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 64429,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "Number of search results in subcategory is less than number of search results in general search",
-            "match": {
-              "location": "SearchResultsPageStepdefs.numberOfSearchResultsInSubcategoryIsLessThanNumberOfSearchResultsInGeneralSearch()"
+              "location": "StartPageStepdefs.maxSalaryInAdvertisementBlockIsGreaterThanK()"
             },
             "keyword": "Then "
           }
         ]
       }
     ],
-    "name": "SearchResultsPage",
+    "name": "StartPage",
     "description": "",
-    "id": "searchresultspage",
+    "id": "startpage",
     "keyword": "Feature",
-    "uri": "SearchResultsPageTest.feature",
+    "uri": "StartPage.feature",
     "tags": [
       {
         "line": 1,
-        "name": "@SearchResultsPage"
+        "name": "@StartPage"
+      }
+    ]
+  },
+  {
+    "line": 3,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 16925046911,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UsersListPageStepdefs.setupStartConditions()"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "When I search for \"bot\" on a user Users tab all search results contain string \"bot\"",
+        "description": "",
+        "id": "userslistpage;when-i-search-for-\"bot\"-on-a-user-users-tab-all-search-results-contain-string-\"bot\"",
+        "after": [
+          {
+            "result": {
+              "duration": 1153027869,
+              "status": "passed"
+            },
+            "match": {
+              "location": "UsersListPageStepdefs.quitDriver()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 457642213,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I click on a Users tab",
+            "match": {
+              "location": "UsersListPageStepdefs.iClickOnAUsersTab()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1731193592,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I enter \"bot\" to search input on a users tab",
+            "match": {
+              "arguments": [
+                {
+                  "val": "bot",
+                  "offset": 9
+                }
+              ],
+              "location": "UsersListPageStepdefs.iEnterToSearchInputOnAUsersTab(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7249447931,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "all search results contain string \"bot\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "bot",
+                  "offset": 35
+                }
+              ],
+              "location": "UsersListPageStepdefs.allSearchResultsContainString(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "UsersListPage",
+    "description": "",
+    "id": "userslistpage",
+    "keyword": "Feature",
+    "uri": "UsersListPage.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@UsersListPage"
       }
     ]
   }

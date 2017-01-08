@@ -27,7 +27,7 @@ public class UsersListPage {
     @FindBy (xpath = ".//div[@class='user-details']/a")
     public List<WebElement> userNamesElements;
 
-    public List listOfUserNames() {
+    public List listOfUserNames() throws InterruptedException {
         List listOfUserNames = new ArrayList(30);
         for (WebElement item : userNamesElements) {
             String username = item.getText().toLowerCase();

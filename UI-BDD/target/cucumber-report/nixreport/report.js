@@ -1,158 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("CartPageTest.feature");
-formatter.feature({
-  "line": 2,
-  "name": "CartPage",
-  "description": "",
-  "id": "cartpage",
-  "keyword": "Feature",
-  "tags": [
-    {
-      "line": 1,
-      "name": "@CartPage"
-    }
-  ]
-});
-formatter.before({
-  "duration": 32568362368,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 4,
-  "name": "001 When I add products to cart they appear in cart with correct price",
-  "description": "",
-  "id": "cartpage;001-when-i-add-products-to-cart-they-appear-in-cart-with-correct-price",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 5,
-  "name": "I add product1 to cart",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 6,
-  "name": "I add product2 to cart",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 7,
-  "name": "I see titles of these products in the cart",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 8,
-  "name": "Total price equals to product1 price plus product2 price",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "CartPageStepdefs.iAddProduct1ToCart()"
-});
-formatter.result({
-  "duration": 18853250560,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CartPageStepdefs.iAddProduct2ToCart()"
-});
-formatter.result({
-  "duration": 18180305576,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CartPageStepdefs.iSeeTitlesOfTheseProductsInTheCart()"
-});
-formatter.result({
-  "duration": 3769564055,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CartPageStepdefs.totalPriceEqualsToProductPriceProductPrice()"
-});
-formatter.result({
-  "duration": 408944350,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 4478075589,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 22176751715,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 10,
-  "name": "002 When I delete product from cart it disappears from cart",
-  "description": "",
-  "id": "cartpage;002-when-i-delete-product-from-cart-it-disappears-from-cart",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 11,
-  "name": "I add product1 to cart",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 12,
-  "name": "I add product2 to cart",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 13,
-  "name": "I add product3 to cart",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 14,
-  "name": "I delete third product from cart",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 15,
-  "name": "This product is not present in the cart",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "CartPageStepdefs.iAddProduct1ToCart()"
-});
-formatter.result({
-  "duration": 15072587032,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CartPageStepdefs.iAddProduct2ToCart()"
-});
-formatter.result({
-  "duration": 15758551817,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CartPageStepdefs.iAddProduct3ToCart()"
-});
-formatter.result({
-  "duration": 13495461173,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CartPageStepdefs.iDeleteThirdProductFromCart()"
-});
-formatter.result({
-  "duration": 5246685752,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CartPageStepdefs.thisProductIsNotPresentInTheCart()"
-});
-formatter.result({
-  "duration": 2044113949,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 1928578393,
-  "status": "passed"
-});
-formatter.uri("LoginTest.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("LoginPage.feature");
 formatter.feature({
   "line": 2,
   "name": "LoginPage",
@@ -167,246 +13,281 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 21951859519,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 4,
-  "name": "001 When I login with certain credentials I see username in header",
-  "description": "",
-  "id": "loginpage;001-when-i-login-with-certain-credentials-i-see-username-in-header",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 5,
-  "name": "I go to login page",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 6,
-  "name": "I set email to \"lena-test-01@ya.ru\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 7,
-  "name": "I set password to \"gfhjkm13\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 8,
-  "name": "I click LoginButton",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 9,
-  "name": "I see username \"olena\" in page header",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LoginPageStepdefs.iGoToLoginPage()"
-});
-formatter.result({
-  "duration": 794779764,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "lena-test-01@ya.ru",
-      "offset": 16
-    }
-  ],
-  "location": "LoginPageStepdefs.iSetEmailTo(String)"
-});
-formatter.result({
-  "duration": 4573162617,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "gfhjkm13",
-      "offset": 19
-    }
-  ],
-  "location": "LoginPageStepdefs.iSetPasswordTo(String)"
-});
-formatter.result({
-  "duration": 409670745,
-  "status": "passed"
-});
-formatter.match({
-  "location": "LoginPageStepdefs.iClickLoginButton()"
-});
-formatter.result({
-  "duration": 3962940177,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "olena",
-      "offset": 16
-    }
-  ],
-  "location": "LoginPageStepdefs.iSeeUsernameInPageHeader(String)"
-});
-formatter.result({
-  "duration": 806097041,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 2281619986,
-  "status": "passed"
-});
-formatter.uri("SearchResultsPageTest.feature");
-formatter.feature({
-  "line": 2,
-  "name": "SearchResultsPage",
-  "description": "",
-  "id": "searchresultspage",
-  "keyword": "Feature",
-  "tags": [
-    {
-      "line": 1,
-      "name": "@SearchResultsPage"
-    }
-  ]
-});
-formatter.before({
-  "duration": 17186306601,
+  "duration": 28948129180,
   "status": "passed"
 });
 formatter.scenario({
   "line": 3,
-  "name": "001 If I enter \"duck\" to search input all results on Search Results page contain \"duck\"",
+  "name": "001 Social authorization blocks are present on a login page",
   "description": "",
-  "id": "searchresultspage;001-if-i-enter-\"duck\"-to-search-input-all-results-on-search-results-page-contain-\"duck\"",
+  "id": "loginpage;001-social-authorization-blocks-are-present-on-a-login-page",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
   "line": 4,
-  "name": "I enter \"duck\" to search input",
+  "name": "I click on LoginButton in header",
   "keyword": "When "
 });
 formatter.step({
   "line": 5,
-  "name": "I click Search Button",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 6,
-  "name": "All search results contain query \"duck\"",
+  "name": "I see google and facebook authorization block on a login page",
   "keyword": "Then "
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "duck",
-      "offset": 9
-    }
-  ],
-  "location": "SearchResultsPageStepdefs.iEnterSmtToSearchInput(String)"
+  "location": "LoginPageStepdefs.iClickOnLoginButtonInHeader()"
 });
 formatter.result({
-  "duration": 1093939849,
+  "duration": 523464570,
   "status": "passed"
 });
 formatter.match({
-  "location": "SearchResultsPageStepdefs.iClickSearchButton()"
+  "location": "LoginPageStepdefs.iSeeGoogleAndFacebookAuthorizationBlockOnALoginPage()"
 });
 formatter.result({
-  "duration": 7487815210,
+  "duration": 1050890124,
   "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "duck",
-      "offset": 34
-    }
-  ],
-  "location": "SearchResultsPageStepdefs.allSearchResultsContainQuery(String)"
-});
-formatter.result({
-  "duration": 207754066,
-  "error_message": "java.lang.AssertionError: Search result cloudnine kid backpack animal design does not contain duck\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat amazone.stepdefinitions.SearchResultsPageStepdefs.allSearchResultsContainQuery(SearchResultsPageStepdefs.java:54)\r\n\tat ✽.Then All search results contain query \"duck\"(SearchResultsPageTest.feature:6)\r\n",
-  "status": "failed"
 });
 formatter.after({
-  "duration": 1832792908,
+  "duration": 2361958814,
+  "status": "passed"
+});
+formatter.uri("QuestionPage.feature");
+formatter.feature({
+  "line": 3,
+  "name": "QuestionPage",
+  "description": "",
+  "id": "questionpage",
+  "keyword": "Feature",
+  "tags": [
+    {
+      "line": 1,
+      "name": "@QuestionPage"
+    }
+  ]
+});
+formatter.before({
+  "duration": 22173844846,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 4,
+  "name": "001 Top questions are asked today",
+  "description": "",
+  "id": "questionpage;001-top-questions-are-asked-today",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 5,
+  "name": "I click on a top question from the start page",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 6,
+  "name": "Date of issue on the question page is \"today\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "QuestionPageStepdefs.iClickOnATopQuestionFromTheStartPage()"
+});
+formatter.result({
+  "duration": 294099234,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "today",
+      "offset": 39
+    }
+  ],
+  "location": "QuestionPageStepdefs.dateOfIssueOnTheQuestionPageIs(String)"
+});
+formatter.result({
+  "duration": 3165993579,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2489680173,
+  "status": "passed"
+});
+formatter.uri("StartPage.feature");
+formatter.feature({
+  "line": 3,
+  "name": "StartPage",
+  "description": "",
+  "id": "startpage",
+  "keyword": "Feature",
+  "tags": [
+    {
+      "line": 1,
+      "name": "@StartPage"
+    }
+  ]
+});
+formatter.before({
+  "duration": 22064245260,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 5,
+  "name": "001 Number of featured questions is greater than 300",
+  "description": "",
+  "id": "startpage;001-number-of-featured-questions-is-greater-than-300",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 6,
+  "name": "I am on a start page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Number of featured questions is greater than 300",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StartPageStepdefs.iAmOnAStartPage()"
+});
+formatter.result({
+  "duration": 27939,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "300",
+      "offset": 45
+    }
+  ],
+  "location": "StartPageStepdefs.numberOfFeaturedQuestionsIsGreaterThan(int)"
+});
+formatter.result({
+  "duration": 130857305,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 1762301031,
   "status": "passed"
 });
 formatter.before({
-  "duration": 17190750496,
+  "duration": 22074348137,
   "status": "passed"
 });
 formatter.scenario({
   "line": 9,
-  "name": "002 Number of search results in subcategory is less than number of search results in general search",
+  "name": "002 Max salary in advertisement block is greater than 60k",
   "description": "",
-  "id": "searchresultspage;002-number-of-search-results-in-subcategory-is-less-than-number-of-search-results-in-general-search",
+  "id": "startpage;002-max-salary-in-advertisement-block-is-greater-than-60k",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
   "line": 10,
-  "name": "I enter \"duck\" to search input",
-  "keyword": "When "
+  "name": "I am on a start page",
+  "keyword": "Given "
 });
 formatter.step({
   "line": 11,
-  "name": "I click Search Button",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 12,
-  "name": "I click on BabyProducts subcategory",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 13,
-  "name": "Number of search results in subcategory is less than number of search results in general search",
+  "name": "Max salary in advertisement block is greater than 60k",
   "keyword": "Then "
+});
+formatter.match({
+  "location": "StartPageStepdefs.iAmOnAStartPage()"
+});
+formatter.result({
+  "duration": 30789,
+  "status": "passed"
+});
+formatter.match({
+  "location": "StartPageStepdefs.maxSalaryInAdvertisementBlockIsGreaterThanK()"
+});
+formatter.result({
+  "duration": 105023956,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 1444446725,
+  "status": "passed"
+});
+formatter.uri("UsersListPage.feature");
+formatter.feature({
+  "line": 3,
+  "name": "UsersListPage",
+  "description": "",
+  "id": "userslistpage",
+  "keyword": "Feature",
+  "tags": [
+    {
+      "line": 1,
+      "name": "@UsersListPage"
+    }
+  ]
+});
+formatter.before({
+  "duration": 21399254900,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 5,
+  "name": "When I search for \"bot\" on a user Users tab all search results contain string \"bot\"",
+  "description": "",
+  "id": "userslistpage;when-i-search-for-\"bot\"-on-a-user-users-tab-all-search-results-contain-string-\"bot\"",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 6,
+  "name": "I click on a Users tab",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 7,
+  "name": "I enter \"bot\" to search input on a users tab",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 8,
+  "name": "all search results contain string \"bot\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "UsersListPageStepdefs.iClickOnAUsersTab()"
+});
+formatter.result({
+  "duration": 343924277,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "duck",
+      "val": "bot",
       "offset": 9
     }
   ],
-  "location": "SearchResultsPageStepdefs.iEnterSmtToSearchInput(String)"
+  "location": "UsersListPageStepdefs.iEnterToSearchInputOnAUsersTab(String)"
 });
 formatter.result({
-  "duration": 934804065,
+  "duration": 6509936671,
   "status": "passed"
 });
 formatter.match({
-  "location": "SearchResultsPageStepdefs.iClickSearchButton()"
+  "arguments": [
+    {
+      "val": "bot",
+      "offset": 35
+    }
+  ],
+  "location": "UsersListPageStepdefs.allSearchResultsContainString(String)"
 });
 formatter.result({
-  "duration": 4930202233,
-  "status": "passed"
-});
-formatter.match({
-  "location": "SearchResultsPageStepdefs.iClickOnBabyProductsSubcategory()"
-});
-formatter.result({
-  "duration": 6590153073,
-  "status": "passed"
-});
-formatter.match({
-  "location": "SearchResultsPageStepdefs.numberOfSearchResultsInSubcategoryIsLessThanNumberOfSearchResultsInGeneralSearch()"
-});
-formatter.result({
-  "duration": 64429,
+  "duration": 930458412,
   "status": "passed"
 });
 formatter.after({
-  "duration": 1577541512,
+  "duration": 2236949763,
   "status": "passed"
 });
-});
+});;

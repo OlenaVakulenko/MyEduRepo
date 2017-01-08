@@ -6,21 +6,23 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import webdrivertest.stackoverflow.stackoverflowMapping.LoginPage;
 import webdrivertest.stackoverflow.stackoverflowMapping.StartPage;
 
 /**
- * Created by olenka on 04.01.2017.
+ * Created by olenka on 08.01.2017.
  */
-public class testStartPage {
+public class testLoginPage {
 
     public static WebDriver driver;
     public static StartPage startPage;
-
+    public static LoginPage loginPage;
 
     @Before
     public void setupStartConditions() {
         driver = new FirefoxDriver();
         startPage = new StartPage(driver);
+        loginPage = new LoginPage(driver);
         driver.manage().window().maximize();
         driver.get("http://stackoverflow.com/");
     }
@@ -31,12 +33,9 @@ public class testStartPage {
     }
 
     @Test
-    public void checkNumberOfFeatured(){
-        Assert.assertTrue("Number of featured items is less than 300",startPage.getNumberOfFeatured() > 300);
-    }
-
-    @Test
-    public void checkSalary() {
-    startPage.getMaxSalary();
+    public void checkSocialAuthorizationBlocksArePresent() {
+        startPage.loginButton.click();
+        Assert.assertTrue("Page does not have Google Authorization icon", loginPage.google.size() > 0);
+        Assert.assertTrue("Page does not have Facebook Authorization icon", loginPage.facebook.size() > 0);
     }
 }
