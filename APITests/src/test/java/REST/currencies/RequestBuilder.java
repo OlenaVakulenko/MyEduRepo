@@ -1,4 +1,4 @@
-package REST.RESTTests;
+package REST.currencies;
 
 /**
  * Created by pixtart on 1/26/2017.

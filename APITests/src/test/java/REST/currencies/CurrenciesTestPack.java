@@ -1,4 +1,4 @@
-package REST.RESTTests;
+package REST.currencies;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -18,15 +18,15 @@ import java.util.Iterator;
 /**
  * Created by olenka on 27.01.2017.
  */
-public class RESTTests {
+public class CurrenciesTestPack {
 
-    public static HttpClient client;
-    public static RequestBuilder request;
-    public static HttpGet get;
-    public static String result = "", line = "";
-    HttpResponse response;
+    public HttpClient client;
+    public RequestBuilder request;
+    public HttpGet get;
+    public HttpResponse response;
 
     private JSONObject readJSON(HttpResponse res) throws IOException {
+        String result = "", line = "";
         BufferedReader rd = new BufferedReader(
                 new InputStreamReader(res.getEntity().getContent()));
         while ((line = rd.readLine()) != null) {

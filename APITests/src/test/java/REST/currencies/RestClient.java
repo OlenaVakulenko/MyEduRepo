@@ -1,4 +1,4 @@
-package REST.RESTTests;
+package REST.currencies;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
