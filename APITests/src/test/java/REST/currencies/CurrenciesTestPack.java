@@ -25,7 +25,7 @@ public class CurrenciesTestPack {
     public HttpGet get;
     public HttpResponse response;
 
-    private JSONObject readJSON(HttpResponse res) throws IOException {
+    public static JSONObject readJSON(HttpResponse res) throws IOException {
         String result = "", line = "";
         BufferedReader rd = new BufferedReader(
                 new InputStreamReader(res.getEntity().getContent()));
